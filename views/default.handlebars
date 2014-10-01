@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>{{title}}</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->        
+      <link rel="stylesheet" type="text/css" href="../css/cleanup.css">
+      <link rel="stylesheet" type="text/css" href="../css/zxzdesigns.css">
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+</head>
+
+<body>
+  <div id="main" class="{{id}}">
+<!--     <img src="{{cover}}" id="splash{{id}}"> -->
+    <div id="content" class="container">
+      <section class="aboutMe">
+        <h1>{{title}}</h1>
+        <p class="large">
+          {{summary}}
+        </p>
+        <figure><img src="../ActivityVizCover.jpg"></figure>
+        {{#each detail}}
+        <div class="center container">
+          <div class="grid-half">
+            <img src="{{image}}">
+          </div>
+          <div class="grid-half">
+            {{#each content}}
+            <p class="large">{{header}}</p>
+            <p class="small">{{text}}</p>
+            {{/each}}
+          </div>
+        </div>
+        {{/each}}
+        <p class="centerText">
+          <a class="button" href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Live Demo</a>
+        </p>
+      </section>
+
+      <section class="contactMe">
+        <h1>Contact Me</h1>
+        <p>
+          
+        </p>
+        <form class="container">
+          <div class="center">
+            <div class="grid-half">
+              <input type="text" placeholder="Name">
+            </div>
+
+            <div class="grid-half">
+              <input type="text" placeholder="E-mail">
+            </div>
+          </div>
+          <textarea type="text" placeholder="Message"></textarea>
+        </form>
+        <p class="centerText">
+          <a class="button" href="/">Send Message</a>
+        </p>
+      </section>
+    </div>
+    <footer>
+      <div>
+        <div>
+          <ul>
+            <li class="title">MENU</li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about">About & Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="title">MISCELANEOUS</li>
+            <li><a href="/">Facebook</a></li>
+            <li><a href="/">Twitter</a></li>
+            <li><a href="/">LinkedIn</a></li>
+            <li><a href="/">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+
+  <script src="../js/mainscript.js"></script>
+  <script src="../js/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+	"location":
+	[
+		"China":"12",
+		"United States":
+		[
+			"Hawaii":"0.4",
+			"California":
+			[
+				"Los Angles":"6",
+				"San Diego":"3",
+				"San Francisco":"0.1"
+			]
+		]
+	]
+}

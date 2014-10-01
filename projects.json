@@ -1,0 +1,100 @@
+{
+	"projects":
+	[
+		{
+			"id": 1,
+			"title": "Activity Viz",
+			"url":"ActivityViz",
+			"preview":"project/ActivityVizPreview.jpg",
+			"summary":"Kinect Data Activity Visualization is designed to be an add-on visualization tool to the existing Kinect data analysis programs such as ELAN and ChronoViz for Gesture Researchers.",
+			"detail": [
+				{
+					"image":"project/ActivityViz/FinalSlide.png",
+					"content":[
+						{
+							"header":"Login",
+							"text":"Data confidentiality issue"
+						},
+						{
+							"header":"CSV File Upload",
+							"text":"Upload working data"
+						},
+						{
+							"header":"Visualization",
+							"text":"Direct manipulative 3D data visualization"
+						}
+					]
+				},
+				{
+					"image":"project/ActivityViz/Idea3.png",
+					"content":[
+						{
+							"header":"Infrastructure",
+							"text":"Kinect -> Kinect Data -> Processor(Computer) -> x3dom.js & D3.js -> Data Visualization"
+						},
+					]
+				},
+				{
+					"image":"project/ActivityViz/InitialPrototype.png",
+					"content":[
+						{
+							"header":"Low Fidelity Prototype",
+							"text":"Blah Blah BlAH"
+						}
+					]
+				}
+			],
+			"header": [
+				"Target",
+				"Features",
+				"Login",
+				"CSV File Upload",
+				"Visualization",
+				"Infrastructure Diagram"
+			],
+			"text": [
+				"Gesture Researchers",
+				"Confidentiality for users",
+				"Upload working data",
+				"Direct manipulative 3D data visualization",
+				"Kinect -> Kinect Data -> Processor(Computer) -> x3dom.js & D3.js -> Data Visualization"
+			]
+
+		},
+		{
+			"id": 2,
+			"title": "UCSDMap",
+			"preview":"project/UCSDMapPreview.jpg"
+		},
+		{
+			"id": 3,
+			"title": "OnMyBlockInterview",
+			"preview":"project/OMBPreview.jpg"
+		},
+		{
+			"id": 4,
+			"title": "PastFortfolio",
+			"preview":"project/PortfolioPreview.jpg"
+		},
+		{
+			"id": 5,
+			"title": "ResumeDesign",
+			"preview":"project/ResumePreview.jpg"
+		},
+		{
+			"id": 6,
+			"title": "SocialFitness",
+			"preview":"project/SocialFitnessPreview.jpg"
+		},
+		{
+			"id": 7,
+			"title": "Park&Go",
+			"preview":"project/PnGPreview.jpg"
+		},
+		{
+			"id": 8,
+			"title": "DragonBall",
+			"preview":"project/DBPreview.jpg"
+		}
+	]
+}
