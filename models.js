@@ -6,7 +6,7 @@ var MessageSchema = new Mongoose.Schema({
   	"name": String,
 	"email": String,
 	"date": Date,
-	"body": String
+	"message": String
 });
 
 exports.Message = Mongoose.model('Message', MessageSchema);

@@ -15,6 +15,7 @@
     <![endif]-->        
       <link rel="stylesheet" type="text/css" href="css/cleanup.css">
       <link rel="stylesheet" type="text/css" href="css/zxzdesigns.css">
+      <link rel="stylesheet" type="text/css" href="css/icons.css">
       <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 
@@ -49,7 +50,7 @@
           </div>
         </div>
         <p class="centerText">
-          <a class="button" href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">My Resume</a>
+          <a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy button">My Resume<span class="glyphicon glyphicon-new-window"></span></a>
         </p>
       </section>
 
@@ -70,10 +71,11 @@
           <div class="center">
             <textarea type="text" placeholder="Hello!" id="messageContent"></textarea>
           </div>
+          <p class="centerText">
+            <a class="button" id="messageButton" href="javascript:sendMessage();">Send Message</a>
+          </br><span id="sent"></span>
+          </p>
         </form>
-        <p class="centerText">
-          <a class="button" id="messageButton" href="#">Send Message</a>
-        </p>
       </section>
     </div>
     <footer>
@@ -90,10 +92,10 @@
         <div>
           <ul>
             <li class="title">MISCELANEOUS</li>
-            <li><a href="/">Facebook</a></li>
-            <li><a href="/">Twitter</a></li>
-            <li><a href="/">LinkedIn</a></li>
-            <li><a href="/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/zhenxzheng" target="_blank" class="no-ajaxy">Facebook</a></li>
+            <li><a href="https://twitter.com/zhenxzheng" target="_blank" class="no-ajaxy">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/zhenxzheng" target="_blank" class="no-ajaxy">LinkedIn</a></li>
+            <li><a href="http://instagram.com/zhenito" target="_blank" class="no-ajaxy">Instagram</a></li>
           </ul>
         </div>
       </div>

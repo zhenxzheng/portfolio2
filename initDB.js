@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 var models   = require('./models');
 
 // Connect to the Mongo database, whether locally or on Heroku
-// MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
+// MAKE SURE TO CHANGE THE NAME FROM 'blah' TO ... IN OTHER PROJECTS
 var local_database_name = 'zxzdesigns';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
@@ -25,10 +25,10 @@ mongoose.connect(database_uri);
 // Do the initialization here
 
 // Step 1: load the JSON data
-var projects_json = require('./messages.json');
+var data_json = require('./messages.json');
 
 // Step 2: Remove all existing documents
-models.Project
+models.Message
   .find()
   .remove()
   .exec(onceClear); // callback to continue at
@@ -37,14 +37,14 @@ models.Project
 function onceClear(err) {
   if(err) console.log(err);
 
-  // loop over the projects, construct and save an object from each one
+  // loop over the messages, construct and save an object from each one
   // Note that we don't care what order these saves are happening in...
-  var to_save_count = projects_json.length;
-  for(var i=0; i<projects_json.length; i++) {
-    var json = projects_json[i];
-    var proj = new models.Project(json);
+  var to_save_count = data_json.length;
+  for(var i=0; i<data_json.length; i++) {
+    var json = data_json[i];
+    var msg = new models.Message(json);
 
-    proj.save(function(err, proj) {
+    msg.save(function(err, msg) {
       if(err) console.log(err);
 
       to_save_count--;

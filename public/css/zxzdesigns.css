@@ -453,8 +453,6 @@ left: 0;
 }
 .nextSection{
 	position:absolute;
-	color:#000;
-	opacity:0.5;
 	bottom:3%;
 	left:50%;
 	padding:0 0.5em;
@@ -463,5 +461,20 @@ left: 0;
 	-moz-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	-o-transform: translate(-50%, -50%);
-
+}
+.nextSection a{
+	color:#fff;
+	opacity:0.5;
+}
+.nextSection a:hover{
+	opacity:1;
+}
+#sent{
+	color:#00FF00;
+	opacity:0;
+	-ms-transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
 }

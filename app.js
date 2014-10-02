@@ -28,8 +28,9 @@ app.get('/home', index.view);
 app.get('/about', about.view);
 app.get('/projects', projects.view);
 app.get('/projects/:url', projects.viewProject);
+app.get('/messages', about.viewMessage);
 
-app.post('/about/message',about.saveMessage);
+app.post('/messages/new', about.saveMessage);
 
 //set environment ports and start application
 app.set('port', process.env.PORT || 3000);

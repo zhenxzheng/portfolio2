@@ -4,12 +4,22 @@ exports.view = function(req, res) {
 	res.render('about');
 }
 
+exports.viewMessage = function(req,res){
+	models.Message
+		.find()
+		.sort('date')
+		.exec(renderMessages);
+	function renderMessages(err, messages){
+		// res.render('messages',{'messages':messages});
+		res.json(messages);
+	}
+}
+
 exports.saveMessage = function(req, res) {
 	var form_data = req.body;
-	console.log(form_data);
 
-	// var newMessage = new models.Message(form_data);
-	// newMessage.save(afterSaving);
+	var newMessage = new models.Message(form_data);
+	newMessage.save(afterSaving);
 
 	function afterSaving(err) {
 		if(err){
@@ -17,6 +27,5 @@ exports.saveMessage = function(req, res) {
 			res.send(500);
 		}
 		res.redirect('/about');
-		console.log("sent");
 	}
 }
