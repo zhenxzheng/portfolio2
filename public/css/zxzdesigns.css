@@ -3,13 +3,13 @@ body{
 	line-height: 1.75em;
 	background-color:#fff;
 	color:#222;
-	font-family: lato;
+	font-family: "lato";
 	font-weight:400;
 	width:100%;
 	overflow:hidden !important; /*hides 2nd main*/
 }
 h1{
-	font-family:lato, sans-serif;
+	font-family:"lato", sans-serif;
 	font-size:2.5em;
 	font-size:7vw;
 	text-transform:uppercase;
@@ -22,7 +22,7 @@ h1{
 	letter-spacing:0.11em;
 }
 h2{
-	font-family:lato, sans-serif;
+	font-family:"lato", sans-serif;
 	font-size:2em;
 	text-transform:uppercase;
 	text-align:left;
@@ -442,14 +442,6 @@ left: 0;
 	-moz-box-shadow:    inset 0 0 10px #000000;
    	-webkit-box-shadow: inset 0 0 10px #000000;
    	box-shadow:         inset 0 0 10px #000000;
-}
-
-#menu{
-	position:absolute;
-	right:0;
-	width:200px;
-	height:100%;
-	background:#000;
 }
 .nextSection{
 	position:absolute;
