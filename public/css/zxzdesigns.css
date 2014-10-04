@@ -3,7 +3,7 @@ body{
 	line-height: 1.75em;
 	background-color:#fff;
 	color:#222;
-	font-family: "lato";
+	font-family: "lato", sans-serif;
 	font-weight:400;
 	width:100%;
 	overflow:hidden !important; /*hides 2nd main*/
