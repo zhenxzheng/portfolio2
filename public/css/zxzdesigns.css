@@ -257,7 +257,7 @@ footer ul li.title{
 footer ul li a{
 	text-decoration:none;
 }
-@media screen and (min-width: 340px) {
+@media screen and (min-width: 300px) {
 	.home #splashHome .splashTitle h1{
 		font-size: 28vw;
 	}
