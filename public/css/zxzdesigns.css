@@ -257,10 +257,24 @@ footer ul li.title{
 footer ul li a{
 	text-decoration:none;
 }
+@media screen and (min-width: 340px) {
+	.home #splashHome .splashTitle h1{
+		font-size: 28vw;
+	}
+	.home #splashHome .splashTitle h2{
+		font-size: 15.5vw;
+	}
+}
 @media screen and (min-width: 700px) {
-  body {
-    font-size: 112.5%;
-  }
+	body {
+		font-size: 112.5%;
+	}
+ 	.home #splashHome .splashTitle h1{
+		font-size: 15vw;
+	}
+	.home #splashHome .splashTitle h2{
+		font-size: 7.5vw;
+	}
 }
 
 @media screen and (min-width: 900px){
@@ -276,6 +290,7 @@ footer ul li a{
 	}
 	.splashTitle h1{
 		letter-spacing:0.04em;
+		font-size:7vw;
 	}
 	body h2, body p{
 		margin-left:auto;
