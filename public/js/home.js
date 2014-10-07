@@ -5,5 +5,5 @@ layoutResize();
 
 function scrollDown(){
 	var destination = $('.home').find('.aboutMe').offset().top;  
-    $('.home').animate({ scrollTop: destination}, 500 );
+    $mainElement.animate({ scrollTop: destination}, 500 );
 }
