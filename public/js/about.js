@@ -1,6 +1,8 @@
 'use strict';
-var titleWidth = $('#splashHome .splashTitle h2').width();
-$('#splashHome .splashTitle .line').css({"width": titleWidth});
+
+window.setTimeout(function(){
+	$('header').removeClass("hideHeader").addClass("showHeader");
+},700);
 
 function sendMessage() {
 	// $('#messageButton').click(function(e){

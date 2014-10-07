@@ -268,6 +268,9 @@ function fetchfile(filename,filetype){
             tempfile=document.createElement('script');
             tempfile.type='text/javascript';
             tempfile.src=filename;
+            tempfile.onload = function(){
+                setHeader();
+            }
         }
         else if (filetype=="css"){
             tempfile=document.createElement('link');
