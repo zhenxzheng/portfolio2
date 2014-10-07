@@ -173,3 +173,8 @@ function headerScroll(){
 	prevScroll = currScroll;
 
 }
+
+function scrollDown(){
+	var destination = $('.home').find('.aboutMe').offset().top;  
+    $mainElement.animate({ scrollTop: destination}, 500 );
+}
