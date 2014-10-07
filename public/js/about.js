@@ -32,7 +32,7 @@ function sendMessage() {
 			}
 		}
 		else{
-			alert(temp);
+			alert(validity);
 		}
 
 	// });
@@ -49,9 +49,9 @@ function validation(name, email, message){
 
 	if (nameMatch!=name || emailMatch!=email || message=="") {
 		validitymsg = "Something is not right..\n";
-		if (nameMatch!=name){validitymsg = validitymsg+"\nInvalid Name.";}
-		if (emailMatch!=email){validitymsg = validitymsg+"\nInvalid Email Address.";}
-		if (message==""){validitymsg = validitymsg+"\nEmpty Message.";}
+		if (nameMatch!=name){validitymsg = validitymsg+"\nInvalid Name. [English Letters Only]";}
+		if (emailMatch!=email){validitymsg = validitymsg+"\nInvalid E-mail. [John.Smith@example.com]";}
+		if (message==""){validitymsg = validitymsg+"\nEmpty Message. ";}
 	}
 	return validitymsg;
 }
