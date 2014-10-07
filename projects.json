@@ -5,43 +5,43 @@
 			"id": 1,
 			"title": "Activity Viz",
 			"url":"ActivityViz",
-			"preview":"project/ActivityVizPreview.jpg",
+			"preview":"Project/ActivityVizPreview.jpg",
 			"summary":"Kinect Data Activity Visualization is designed to be an add-on visualization tool to the existing Kinect data analysis programs such as ELAN and ChronoViz for Gesture Researchers."
 		},
 		{
 			"id": 2,
 			"title": "UCSDMap",
-			"preview":"project/UCSDMapPreview.jpg"
+			"preview":"Project/UCSDMapPreview.jpg"
 		},
 		{
 			"id": 3,
 			"title": "OnMyBlockInterview",
-			"preview":"project/OMBPreview.jpg"
+			"preview":"Project/OMBPreview.jpg"
 		},
 		{
 			"id": 4,
 			"title": "PastFortfolio",
-			"preview":"project/PortfolioPreview.jpg"
+			"preview":"Project/PortfolioPreview.jpg"
 		},
 		{
 			"id": 5,
 			"title": "ResumeDesign",
-			"preview":"project/ResumePreview.jpg"
+			"preview":"Project/ResumePreview.jpg"
 		},
 		{
 			"id": 6,
 			"title": "SocialFitness",
-			"preview":"project/SocialFitnessPreview.jpg"
+			"preview":"Project/SocialFitnessPreview.jpg"
 		},
 		{
 			"id": 7,
 			"title": "Park&Go",
-			"preview":"project/PnGPreview.jpg"
+			"preview":"Project/PnGPreview.jpg"
 		},
 		{
 			"id": 8,
 			"title": "DragonBall",
-			"preview":"project/DBPreview.jpg"
+			"preview":"Project/DBPreview.jpg"
 		}
 	]
 }
