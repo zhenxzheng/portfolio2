@@ -15,7 +15,8 @@
     "express3-handlebars": "*",
     "mongodb": "*",
     "mongoose": "*",
-    "dotenv": "*"
+    "dotenv": "*",
+    "serve-favicon":"*"
   },
   "engines": {
     "node": "0.10.x"

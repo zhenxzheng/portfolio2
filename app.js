@@ -3,6 +3,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
+var favicon = require('serve-favicon');
 var app = express();
 
 //route files to load
@@ -19,8 +20,10 @@ mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost/zxzdesigns');
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.bodyParser());
+
 
 //routes
 app.get('/', index.redirect);

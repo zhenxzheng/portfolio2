@@ -63,6 +63,7 @@ a{
 	margin-left:auto;
 	margin-right:auto;
 	overflow:hidden !important;
+	padding-top:2.5em;
 	*zoom:1;
 }
 form.container{
@@ -112,19 +113,43 @@ header ul li a:hover{
 	text-align: center;
 	position:relative;
 }
-/*.splash{
+#splashHome{
+	background: url("../photo1.jpg");
 	width:100%;
 	height:100%;
-/*	background: url("../ActivityVizCover.jpg");
 	background-size:cover;
 	background-position:center center;
 	text-align: center;
 	position:relative;
-}*/
-#splashHome{
-	background:#373737;
 }
-
+/*#splashHome{
+	background: url("../photo1.jpg");
+}*/
+#mutt{
+	background: url("../photo4.jpg");
+	width:100%;
+	height:100%;
+	background-size:cover;
+	background-position:center center;
+	text-align: center;
+	position:relative;
+}
+#mutt p a{
+	position:absolute;
+	bottom:13%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+#mutt .button{
+	color:#fff;
+	border-color:#fff;
+}
+#mutt .button:hover{
+	background:white;
+	color:black;
+}
 .splashTitle{
 	position: absolute;
 	width:100%;
@@ -188,10 +213,13 @@ header ul li a:hover{
 .aboutMe{
 	margin-bottom:13em;
 }
-.whatIdo, .contactMe{
+.contactMe{
 	margin-bottom:8.2em;
 }
-.aboutMe:after, .whatIdo:after, .contactMe:after{
+.whatIdo{
+	margin-bottom:6em;
+}
+.aboutMe:after, .contactMe:after{
 	content:"";
 	position:absolute;
 	left:0;
@@ -218,7 +246,7 @@ header ul li a:hover{
 }
 ul{
 	text-align:center;
-	margin:3em auto;
+	margin:4em auto;
 }
 .centerText{
 	text-align:center;
@@ -302,7 +330,7 @@ footer ul li a{
 		margin-bottom:4.28em;
 		font-size:0.75em;
 		line-height: 2.333333;
-		text-align:justify;
+		text-align:left;
 	}
 	.center{
 		display: -moz-box;
