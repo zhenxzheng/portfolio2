@@ -14,7 +14,7 @@ body{
 h1{
 	font-family:"lato", sans-serif;
 	font-size:2.5em;
-	font-size:7vw;
+	font-size:11.5vw;
 	text-transform:uppercase;
 	text-align:center;
 	font-weight:900;
@@ -45,7 +45,7 @@ body p{
 	text-align:left;
 }
 p{
-	margin-bottom: 2.5em;
+	margin-bottom: 1em;
 	line-height: 1.75em;
 }
 p.large{
@@ -63,8 +63,12 @@ a{
 	margin-left:auto;
 	margin-right:auto;
 	overflow:hidden !important;
-	padding-top:2.5em;
+	padding-top:3.3em;
 	*zoom:1;
+}
+img{
+	margin-top:0;
+	margin-bottom:1em;
 }
 form.container{
 	width:100%;
@@ -72,6 +76,16 @@ form.container{
 .grid-half, .grid-thirds{
 	width:100%;
 	display:inline-block; 
+	margin-bottom:0.5em;
+}
+.projects div{
+	line-height:0;
+}
+.projects .grid-thirds{
+	margin-bottom:0;
+}
+strong{
+	font-weight:900;
 }
 header{
 	width:100%;
@@ -80,7 +94,7 @@ header{
 }
 header ul{
 	text-align:right;
-	margin:0 2em;
+	margin:0 1em;
 }
 header ul li{
 	margin-right:10px;
@@ -216,6 +230,9 @@ header ul li a:hover{
 .contactMe{
 	margin-bottom:8.2em;
 }
+.contactMe h1, .projects h1, .project h1{
+	margin-bottom:1em;
+}
 .whatIdo{
 	margin-bottom:6em;
 }
@@ -242,7 +259,6 @@ header ul li a:hover{
 	font-size:18px;
 	font-weight:1000;
 	margin-top:2.5em;
-
 }
 ul{
 	text-align:center;
@@ -255,6 +271,7 @@ a.button{
 	border: 1px solid #bdc3c7;
 	border-radius:300px;
 	padding:15px 50px;
+	margin-top:2em;
 	font-size: 14px;
 	text-transform:uppercase;
 	letter-spacing:0.2em;
@@ -285,6 +302,11 @@ footer ul li.title{
 footer ul li a{
 	text-decoration:none;
 }
+
+p.demoNote{
+	color:#999;
+	font-style:italic;
+}
 @media screen and (min-width: 300px) {
 	.home #splashHome .splashTitle h1{
 		font-size: 28vw;
@@ -297,11 +319,23 @@ footer ul li a{
 	body {
 		font-size: 112.5%;
 	}
+	body h1 {
+		font-size:9vw;
+	}
  	.home #splashHome .splashTitle h1{
 		font-size: 15vw;
 	}
 	.home #splashHome .splashTitle h2{
 		font-size: 7.5vw;
+	}
+	p.small{
+		margin-bottom:2em;
+		font-size:0.8em;
+		line-height:1.5em;
+	}
+	p.demoNote{
+		margin:0 auto !important;
+		width:100%;
 	}
 }
 
@@ -397,6 +431,31 @@ footer ul li a{
 		margin-top:2%;
 		margin-bottom:7%;
 	}
+	.project div{
+		line-height:0;
+	}
+	.project img{
+		line-height:0;
+		margin:0;
+	}
+	.project .grid-half{
+		width:50%;
+		margin:0;
+	}
+	.project p.small{
+		margin:0;
+		padding:0 5em;
+	}
+	.project .grid-half p.small{
+		margin:0;
+		padding:0 1em;
+	}
+	.project .container{
+		padding-top:0;
+	}
+		p.note{
+		padding:1em 0 !important;
+	}
 }
 @media screen and (min-width:960px){
 	.container{
@@ -442,11 +501,6 @@ form textarea{
 	display:block;
 	margin:0 auto 1.5em;
 }
-
-.1 div, .1 img{
-	line-height:0;
-	margin:0;
-}
 /*  <section class="svg-container">
     <object type="image/svg+xml" data="images/ShenLongFaceSVG.svg" width="100%" height="100%" class="svg-content"></object>
   </section>
@@ -466,23 +520,23 @@ top: 0;
 left: 0;
 }*/
 
-.inactive {
+.goaway {
 	-ms-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 	-webkit-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 	-moz-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 	-o-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 	transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-	-webkit-transform: scale(0.8);
+/*	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	-ms-transform: scale(0.8);
 	-o-transform: scale(0.8);
-	transform: scale(0.8);
+	transform: scale(0.8);*/
 	opacity: 0.5;
 	z-index: 1;
 	overflow: hidden;
 }
 
-.active {
+.comein {
 	-ms-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
 	-webkit-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
 	-moz-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -501,6 +555,28 @@ left: 0;
 	opacity: 1;
 	z-index: 2;
 	overflow: hidden;
+}
+.active{
+	-ms-transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	z-index:2;
+}
+.inactive{
+	-ms-transition: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+	opacity: 0;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	z-index: 1;
 }
 .hideHeader{
 	-ms-transition: all 0.8s ease;
