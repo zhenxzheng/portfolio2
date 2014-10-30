@@ -113,7 +113,7 @@
 
             // Set Loading
             //$body.addClass('loading');
-            $body.addClass(mypages[myindex]);
+            // $body.addClass(mypages[myindex]);
 
             // Start Fade Out
             // Animating to opacity to 0 still keeps the element's height intact
@@ -161,24 +161,23 @@
 
                         $('#main2').stop(true,true);
                         $('#main2').append( contentHtml ).ajaxify();
-                        $('#main2').html(contentHtml).ajaxify();
+                        $('#main2').html(contentHtml).ajaxify();                        
 
-                        // $('#main').css('top', 2*$(window).height()/3 );
+                        $('#main').removeClass('active').addClass('goaway');
+                        $('#main').css('top', 2*$(window).height()/3 )
 
                         $('#main2').addClass( mypages[ myindex ] );
-
-                        $('#main').removeClass('active').addClass('inactive');
-                        $('#main2').removeClass('inactive').addClass('active');
-                        // $('#main-2').removeClass('reset').addClass('comein');
-                        // $('#main').animate({top:$(window).height()});
-
+                        $('#main2').css('height', $(window).height());
+                        $('#main2').removeClass('inactive').addClass('comein');
                         $('#main2').css('top', 0 );
-
                         $('#main2').scrollTop(0);
 
                         window.setTimeout(function(){
                             $body.removeClass(mypages[previndex]);
                             previndex=myindex;
+                            $('#main').removeClass().addClass('inactive');
+                            $('#main2').removeClass('comein').addClass('active');
+                            $('#main').css('height', 0);
                             $('#main').css('top',$(window).height());
                         },600);
                     }
@@ -189,25 +188,22 @@
                         $('#main').append( contentHtml ).ajaxify();
                         $('#main').html(contentHtml).ajaxify();
 
-                        // $('#main2').css('top', 2*$(window).height()/3 );
+                        $('#main2').removeClass('active').addClass('goaway');
+                        $('#main2').css('top', 2*$(window).height()/3 )
 
                         $('#main').addClass( mypages[ myindex ] );
-
-                        $('#main2').removeClass('active').addClass('inactive');
-                        $('#main').removeClass('inactive').addClass('active');
-                        // $('#main2').animate({top:$(window).height()});
-                        // $('#main-2').removeClass('reset').addClass('comein');
-                        
-
+                        $('#main').css('height', $(window).height());
+                        $('#main').removeClass('inactive').addClass('comein');
                         $('#main').css('top', 0 );
-
                         $('#main').scrollTop(0);
+
 
                         window.setTimeout(function(){
                             $body.removeClass(mypages[previndex]);
                             previndex=myindex;
-                            // $('#main2').css('top',$(window).height());
-
+                            $('#main2').removeClass().addClass('inactive');
+                            $('#main').removeClass('comein').addClass('active');
+                            $('#main2').css('height', 0);
                             $('#main2').css('top',$(window).height());
                         },600);
                     }

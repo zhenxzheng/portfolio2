@@ -12,12 +12,28 @@ var myindex,
 var mypages = [
 	'home',
 	'about',
-	'projects'
+	'projects',
+		'ActivityViz',		//1
+		'UCSDMap',			//2
+		'OnMyBlock',		//3
+		'PastPortfolios',	//4
+		'ResumeDesign',		//5
+		'SocialFitness',	//6
+		'ParknGo',			//7
+		'IconDesign'		//8
 ];
 var myscripts = [
 	'../js/home.js',
 	'../js/about.js',
-	'../js/default.js'
+	'../js/default.js',
+		'../../js/default.js',	//1
+		'../../js/default.js',	//2
+		'../../js/default.js',	//3
+		'../../js/default.js',	//4
+		'../../js/default.js',	//5
+		'../../js/default.js',	//6
+		'../../js/default.js',	//7
+		'../../js/default.js'	//8
 ];
 
 
@@ -124,15 +140,16 @@ function setHeader(){
 		mypages[myindex] == 'about'){
 			$('header ul li a').css("color","white");
 			$('header').css("background","");
-			$('header').css("box-shadow","");
-			console.log("home aobut");
+			// $('header').css("box-shadow","");
+			$('header').css("border-bottom","");
+
 	}
 	//else black text header
 	else{
 		$('header ul li a').css("color","black");
 		$('header').css("background","white");
-		$('header').css("box-shadow","0 0 10px #777");
-		console.log("projects");
+		// $('header').css("box-shadow","0 0 10px #777");
+		$('header').css("border-bottom","solid 1px #777");
 
 	}
 	if($isMobile != null){
@@ -154,11 +171,11 @@ function headerScroll(){
 		}
 		if (currScroll > $(window).height()){
 			$('header').css("background","white");
-			$('header').css("box-shadow","0 0 10px #777");
+			$('header').css("border-bottom","solid 1px #777");
 		}
 		else {
 			$('header').css("background","");
-			$('header').css("box-shadow","");
+			$('header').css("border-bottom","");
 		}	
 	}
 
