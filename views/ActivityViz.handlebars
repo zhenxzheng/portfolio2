@@ -4,8 +4,8 @@
 <head>
 	<title>Activity Viz</title>	
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/png" href="../favicon.ico">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,58 +15,170 @@
     <![endif]-->        
       <link rel="stylesheet" type="text/css" href="../css/cleanup.css">
       <link rel="stylesheet" type="text/css" href="../css/zxzdesigns.css">
+      <link rel="stylesheet" type="text/css" href="../css/icons.css">
       <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-
 </head>
 
 <body>
+  <header class="hideHeader">
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/about">About&Contact</a></li>
+    </ul>
+  </header>
   <div id="main" class="1">
-<!--     <img src="{{cover}}" id="splash{{id}}"> -->
     <div id="content" class="container">
-      <section class="aboutMe">
+      <section class="project">
         <h1>Activity Viz</h1>
         <p class="large">
-          Kinect Data Activity Visualization is designed to be an add-on visualization tool to the existing Kinect data analysis programs such as ELAN and ChronoViz for Gesture Researchers.
+          Kinect Data Activity Visualization is designed to be an add-on visualization tool to the existing Kinect data analysis programs such as <a href="https://tla.mpi.nl/tools/tla-tools/elan/" target="_blank" class="no-ajaxy">ELAN</a> and <a href="http://chronoviz.com/" target="_blank" class="no-ajaxy">ChronoViz</a> for Gesture Researchers.
         </p>
-        <div class="center">
+        <div>
           <div>
-            <img src="../../ActivityVizCover.jpg">
+            <img src="../Project/ActivityViz/Cover.jpg">
           </div>
         </div>
         <div class="center">
           <div class="grid-half">
-            <img src="../project/ActivityViz/FinalSlide.png">
+            <p class="small">
+              <strong>MAIN TOOLS</strong>
+              <br>
+              Node.js | MongoDB | Mustache | Passport | D3.js | x3dom | HTML | Bootstrap | Github | Heroku
+            </p>
           </div>
           <div class="grid-half">
-            <img src="../project/ActivityViz/Idea3.png">
+            <img src="../Project/ActivityViz/FinalSlide.png">
           </div>
         </div>
-
-        <p class="centerText">
-          <a class="button" href="..//Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Live Demo</a>
-        </p>
-      </section>
-
-      <section class="contactMe">
-        <h1>Contact Me</h1>
-        <p>
-          
-        </p>
-        <form class="container">
-          <div class="center">
-            <div class="grid-half">
-              <input type="text" placeholder="Name">
-            </div>
-
-            <div class="grid-half">
-              <input type="text" placeholder="E-mail">
-            </div>
+        <div class="center">
+          <div class="grid-half">
+            <img src="../Project/ActivityViz/3D-frontalview.png">
           </div>
-          <textarea type="text" placeholder="Message"></textarea>
-        </form>
+          <div class="grid-half">
+            <img src="../Project/ActivityViz/3D-sideview.png">
+          </div>
+        </div>
+        <div class="center">
+          <p class="small note">
+            <strong>WHAT/WHY</strong>
+            <br>
+            Existing Kinect data analyzing programs such as <a href="https://tla.mpi.nl/tools/tla-tools/elan/" target="_blank" class="no-ajaxy">ELAN</a> and <a href="http://chronoviz.com/" target="_blank" class="no-ajaxy">ChronoViz</a> have limitations on the visualization. Gesture researchers do not have the ability to change its size and dimension, and most importantly, they do not have the freedom to manipulate the visualization. Some researchers even filtered data points by omitting the z coordinate, so that they can create their own 2D visualization. These limitations and work-around pose a critical constrain on the full potential of the Kinect data. 
+            <br>
+            <br>
+            Overall, the user data suggested that user control and freedom are violated the most in the design aspect of these programs. Therefore, a more manipulative visualization is much needed for their research.
+          </p>
+        </div>
+
+        <div>
+          <div>
+            <img src="../Project/ActivityViz/InfrastructureDiagram.png">
+          </div>
+        </div>
+        <div class="center">
+          <div class="grid-half">
+            <p class="small">
+              <strong>INFRASTRUCTURE DIAGRAM</strong>
+              <br>
+              Kinect ->> CSV File ->> Operating System ->> D3.js + x3dom ->> Visualization
+            </p>
+          </div>
+          <div class="grid-half">
+            <img src="../Project/ActivityViz/CSVSample.png">
+          </div>
+        </div>
+        <div class="center">
+          <div class="grid-half">
+            <img src="../Project/ActivityViz/d3.jpg">
+          </div>
+          <div class="grid-half">
+            <img src="../Project/ActivityViz/x3dom.jpg">
+          </div>
+        </div>
+        <p class="large note">
+          <strong>DESIGN DECISION</strong>
+        </p>
+        <div class="center">
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>User-Centered Design</strong>
+              <br>
+              Due to gesture researchers' heavy concern of data confidentiality, we decided to implement an account signup/signin feature so users must login to use the application.
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>User Control & Freedom</strong>
+              <br>
+              Visualization is directly manipulative. Users may click and drag the visualization to a different angle. In addition, they may also zoom in/out to get a better view of the data. 
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Minimalist Design</strong>
+              <br>
+              Minimal content on each process stage to keep a simple and clean look, and making the advanced filtering options collapsable helps minimizing clusterness of contents.
+            </p>
+            
+          </div>
+        </div>
+        <div class="center">
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>User Control & Freedom</strong>
+              <br>
+              Upload feature for users to work on any Kinect CSV file that they wish. It accepts 2D (x-y corrdinate points) or 3D (x-y-z coordinate points).
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Error Prevention</strong>
+              <br>
+              Force users to upload only Kinect generated CSV format file, and it will only proceed to the visualization if the format is correct.
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Help Users Recover from Errors</strong>
+              <br>
+              Error messages will pop up if the wrong type of file is selected for uploading. The selected file's name will also be displayed on the page.  
+            </p>
+          </div>
+        </div>
+        <div class="center">
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>User Control & Freedom</strong>
+              <br>
+              Data filtering options near the visualization further provide data customizability and manipulation. 
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Flexibility and Efficiency of Use</strong>
+              <br>
+              Consistent navbar that provides each stage of process reduces time for users to recover from mistakes.
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Recognition rather than Recall</strong>
+              <br>
+              A message is next to the "Choose File" to remind user's interaction - what file they selected.
+            </p>
+          </div>
+        </div>
+        <div class="center">
+          <p class="small demoNote">
+            Demo Note: 
+            create an account or use 
+            USERNAME: zhenxzheng PW: 123456789 
+            skip uploading file by clicking on visualization button on nav bar to see visualization demo.
+          </p>
+        </div>
         <p class="centerText">
-          <a class="button" href="/">Send Message</a>
+          <a class="button" href="http://activiz.herokuapp.com/" target="_blank" class="no-ajaxy">Demo<span class="glyphicon glyphicon-new-window"></span></a>
         </p>
       </section>
     </div>
@@ -83,19 +195,32 @@
         </div>
         <div>
           <ul>
-            <li class="title">MISCELANEOUS</li>
-            <li><a href="/">Facebook</a></li>
-            <li><a href="/">Twitter</a></li>
-            <li><a href="/">LinkedIn</a></li>
-            <li><a href="/">Instagram</a></li>
+            <li class="title">MISCELLANEOUS</li>
+            <li><a href="https://www.facebook.com/zhenxzheng" target="_blank" class="no-ajaxy">Facebook</a></li>
+            <li><a href="https://twitter.com/zhenxzheng" target="_blank" class="no-ajaxy">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/zhenxzheng" target="_blank" class="no-ajaxy">LinkedIn</a></li>
+            <li><a href="http://instagram.com/zhenito" target="_blank" class="no-ajaxy">Instagram</a></li>
           </ul>
         </div>
       </div>
     </footer>
   </div>
-  
 
+  <div id="main2"></div>
+  
+  <!-- jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- jQuery ScrollTo Plugin -->
+  <script src="//balupton.github.io/jquery-scrollto/lib/jquery-scrollto.js"></script>
+
+  <!-- History.js -->
+  <script src="//browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+
+  <!-- Ajaxify -->
+  <script src="../js/ajaxify.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
   <script src="../js/mainscript.js"></script>
-  <script src="../js/about.js"></script>
+  <script src="../js/default.js"></script>
 </body>
 </html>
