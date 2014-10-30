@@ -1,0 +1,71 @@
+I have sketched and designed a version of the list view yesterday (see
+images "sketches" and "listview-v1"). However, I have presented that
+version to a number of people and most of the people did not like the half
+and half split.
+Therefore today I have redesigned the layout and created the version2
+list-view (see image "listview-v2").
+
+ideas:
+
+listview-v2:
+A list-view concept will display a list of available houses that are
+showing on the current map location. The alphabets on the list-view will
+match the ones on the map. If the mouse is hovering above a listing, the
+box will turn darker and the marker on the map will turn slightly bigger
+and will be in a different color.
+
+If the target users are for college students, I find that the distance
+between the houses and campus (or a certain location) is a considering
+factors for most students since they will have to commute to campus (other
+location) everyday. So the assignment of alphabets are based on the
+distance to campus (or a location that they may have entered).
+
+listview-vdetails:
+In addition, a more compressed detailed list is for the ones who are
+experts for house hunting and they just need the basic information, and
+this detailed list will make comparing houses easier and faster.
+
+Colors/styles:
+The colors and styles are based on the current website of OnMyBlock.
+
+Interaction:
+the list will be under the map and as you click on the open button, the
+map will slide open and show the list, or users can just click on the
+viewing option buttons on the upper right hand corner (map|list|detail) to
+open the list. The list can be scrolled with the flat designed scroll-bar.
+(Also applicable on tablet or mobile).
+
+----------------------------------------------------------------------------
+
+I just wanted to make sure I didn't miss any of your feedbacks on the list
+view concept.
+-flatten list and map so they are on the same layer
+-take out assigned alphabets from both list and map
+-take out enter arrow from the listing
+-show interaction on the favorite button
+-show and redesign the sort function entirely"
+
+----------------------------------------------------------------------------
+
+Focus:
+map and list: same layer.
+Favorite button: gray (default), pink opacity=0.5 (hover), pink (active).
+Favorite listing marker will also be pink;
+(I know the comments and restaurants markers are in pink, but i think the
+favorites should have an obvious contrast color between the normal ones
+and the favorite ones. Perhaps a change in the color of the other markers
+can be made? just a suggestion)
+
+Sort Function:
+-tags with labels. Sorting will be based on priority of the tags: if the
+street tag comes before the rent tag, for example, it will sort all of the
+listing by street names first, then sort the rent prices within those with
+the same street name. Tags can also be drag around to change their
+priority.
+-hover over tags: an "x" will appear and the tag can be remove if click on x.
+-tag button: the tag will act as a button as well. when clicking on the
+tag itself (beside the x), it will change the direction of the arrow
+(ascending or descending order sorting).
+-sort menu: down arrow on the right side to open sort menu. active tags
+are in a different color. simply clicking on the button to select/deselect
+tags. x button or up arrow to close menu.
