@@ -2,10 +2,10 @@
 
 <html>
 <head>
-	<title>{{title}}</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	
+  <title>Icon Design</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/png" href="../favicon.ico">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,6 +15,7 @@
     <![endif]-->        
       <link rel="stylesheet" type="text/css" href="../css/cleanup.css">
       <link rel="stylesheet" type="text/css" href="../css/zxzdesigns.css">
+      <link rel="stylesheet" type="text/css" href="../css/icons.css">
       <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
@@ -27,44 +28,15 @@
       <li><a href="/about">About&Contact</a></li>
     </ul>
   </header>
-  <div id="main" class="{{id}}">
-<!--     <img src="{{cover}}" id="splash{{id}}"> -->
+  <div id="main" class="1">
     <div id="content" class="container">
       <section class="project">
-        <h1>{{title}}</h1>
-        <p class="large">
-          {{summary}}
-        </p>
-        <div class="container">
-        {{#each content}}
+        <h1>Icon Design</h1>
+        <div>
           <div>
-            <img src="../Project/{{top}}">
+            <img src="../Project/IconDesign/DB.jpg">
           </div>
-          <div class="center">
-            <div class="grid-half">
-              <p class="small">
-                <strong>{{left1.title}}</strong></br>
-                {{left1.body}}
-              </p>
-            </div>
-            <div class="grid-half">
-              <img src="../Project/{{right1}}">
-            </div>
-          </div>
-          <div class="center">
-            <div class="grid-half">
-              <img src="../Project/{{left2}}">
-            </div>
-            <div class="grid-half">
-              <img src="../Project/{{right2}}">
-            </div>
-          </div>
-        {{/each}}
-        <p class="small">{{note}}</p>
         </div>
-        <p class="centerText">
-          <a class="button" href="http://activiz.herokuapp.com/" target="_blank" class="no-ajaxy">Live Demo</a>
-        </p>
       </section>
     </div>
     <footer>
@@ -80,18 +52,31 @@
         </div>
         <div>
           <ul>
-            <li class="title">MISCELANEOUS</li>
-            <li><a href="/">Facebook</a></li>
-            <li><a href="/">Twitter</a></li>
-            <li><a href="/">LinkedIn</a></li>
-            <li><a href="/">Instagram</a></li>
+            <li class="title">MISCELLANEOUS</li>
+            <li><a href="https://www.facebook.com/zhenxzheng" target="_blank" class="no-ajaxy">Facebook</a></li>
+            <li><a href="https://twitter.com/zhenxzheng" target="_blank" class="no-ajaxy">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/zhenxzheng" target="_blank" class="no-ajaxy">LinkedIn</a></li>
+            <li><a href="http://instagram.com/zhenito" target="_blank" class="no-ajaxy">Instagram</a></li>
           </ul>
         </div>
       </div>
     </footer>
   </div>
-  
 
+  <div id="main2"></div>
+  
+  <!-- jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- jQuery ScrollTo Plugin -->
+  <script src="//balupton.github.io/jquery-scrollto/lib/jquery-scrollto.js"></script>
+
+  <!-- History.js -->
+  <script src="//browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+
+  <!-- Ajaxify -->
+  <script src="../js/ajaxify.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
   <script src="../js/mainscript.js"></script>
   <script src="../js/default.js"></script>
 </body>

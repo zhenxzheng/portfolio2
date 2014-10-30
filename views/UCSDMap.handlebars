@@ -1,0 +1,177 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>UCSD Map</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/png" href="../../favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->        
+      <link rel="stylesheet" type="text/css" href="../css/cleanup.css">
+      <link rel="stylesheet" type="text/css" href="../css/zxzdesigns.css">
+      <link rel="stylesheet" type="text/css" href="../css/icons.css">
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+  <header class="hideHeader">
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/about">About&Contact</a></li>
+    </ul>
+  </header>
+  <div id="main" class="1">
+    <div id="content" class="container">
+      <section class="project">
+        <h1>UCSD Map</h1>
+        <p class="large">
+          UCSD Map is designed to provide quick building locator inside of the campus of UCSD for any one who is on campus. User target includes students, staffs, and visitors.
+        </p>
+        <div>
+          <div>
+            <img src="../Project/UCSDMap/Cover.jpg">
+          </div>
+        </div>
+        <div class="center">
+          <div class="grid-half">
+            <p class="small">
+              <strong>MAIN TOOLS</strong>
+              <br>
+              Node.js | MongoDB | Handlebars | JSON database | Google Map API | Google Analytics | Javascript | HTML | Bootstrap | Github | Heroku
+            </p>
+          </div>
+          <div class="grid-half">
+            <img src="../Project/UCSDMap/testing.JPG">
+          </div>
+        </div>
+        <div class="center">
+          <div class="grid-half">
+            <img src="../Project/UCSDMap/json.jpg">
+          </div>
+          <div class="grid-half">
+            <img src="../Project/UCSDMap/autocomplete.jpg">
+          </div>
+        </div>
+        <div class="center">
+          <p class="small note">
+            <strong>WHAT/WHY</strong>
+            <br>
+            UCSD uses at least 3 types of references for a structure or a building on campus: 1. Building names - such as Pepper Canyon Hall, Biology Building, and Applied Physics & Mathematics Building; 2. Building abbreviations (codes) - PCYNH, BIO, APM; 3. Building numbers - 780, 259, 249. Many people may learn the name of a building, but the code and number are most oftenly used on writing. Building codes are always used on students' schedule, and building numbers are often used for outside visitors. Even the most popular map application on a smart device can be useless when it comes to a specific reference.
+            <br>
+            <br>
+            Therefore, we decided to use Google Map API to generate a map and populate a building database with the building' name, code, number, and map coordinates. With a building database that is dedicated to only UCSD buildings, any one can navigate through UCSD without any confusion.
+          </p>
+        </div>
+        <div class="center">
+          <p class="large note">
+            <strong>DESIGN DECISIONS</strong>
+          </p>
+        </div>
+        <div class="center">
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Consistency & Standards</strong>
+              <br>
+              We decided to use Google Map because Google Map is one of the most used mobile map today, so using Google Map as part of our applicaiton will give user a familiar feel. 
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Help & Documentation</strong>
+              <br>
+              Landing page has a visible guide when user first arrive on the applicaiton. It speeds up user performance and ahieve their task faster, especially for new users.
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Consistency & Standards</strong>
+              <br>
+              It is almost necessary to have a current location function as a must-have feature for a map application, so we decided to intergrad it in our applicaiton.
+            </p> 
+          </div>
+        </div>
+        <div class="center">
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Minimalist Design</strong>
+              <br>
+              The application kept the content components to the minimum, a search bar, a map, and only the result content if a search is made.
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Error Prevention</strong>
+              <br>
+              Auto-complete funciton forces user to choose a searching result, preventing user from making errors when searching for a UCSD building.
+            </p>
+          </div>
+          <div class="grid-thirds">
+            <p class="small note">
+              <strong>Flexibility and Efficiency of Use</strong>
+              <br>
+              The auto-complete function generates a suggestion list while the user is typing, serving as an accelerator to speed up user interaction.
+            </p>
+          </div>
+        </div>
+        <div class="center">
+          <p class="small demoNote">
+            Demo note:
+            MUST ALLOW GPS ON YOUR BROWSER.
+            Application was designed for mobile device (iPhone 4 specifically), so Layout format may look different on a desktop browser (but it still works).
+          </p>
+        </div>
+        <p class="centerText">
+          <a class="button" href="http://mapucsd2.herokuapp.com/" target="_blank" class="no-ajaxy">Demo<span class="glyphicon glyphicon-new-window"></span></a>
+        </p>
+      </section>
+    </div>
+    <footer>
+      <div>
+        <div>
+          <ul>
+            <li class="title">MENU</li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about">About & Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="title">MISCELLANEOUS</li>
+            <li><a href="https://www.facebook.com/zhenxzheng" target="_blank" class="no-ajaxy">Facebook</a></li>
+            <li><a href="https://twitter.com/zhenxzheng" target="_blank" class="no-ajaxy">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/zhenxzheng" target="_blank" class="no-ajaxy">LinkedIn</a></li>
+            <li><a href="http://instagram.com/zhenito" target="_blank" class="no-ajaxy">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="main2"></div>
+  
+  <!-- jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- jQuery ScrollTo Plugin -->
+  <script src="//balupton.github.io/jquery-scrollto/lib/jquery-scrollto.js"></script>
+
+  <!-- History.js -->
+  <script src="//browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+
+  <!-- Ajaxify -->
+  <script src="../js/ajaxify.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
+  <script src="../js/mainscript.js"></script>
+  <script src="../js/default.js"></script>
+</body>
+</html>
