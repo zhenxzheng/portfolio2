@@ -4,6 +4,7 @@ var data = require('../projects.json');
 exports.view = function(req, res) {
 	res.render('projects',data);
 }
+
 // exports.viewProject = function(req,res){
 // 	var url = req.params.url;
 // 	var project = getProjectData(url);
