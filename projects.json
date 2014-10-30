@@ -6,41 +6,87 @@
 			"title": "Activity Viz",
 			"url":"ActivityViz",
 			"preview":"Project/ActivityVizPreview.jpg",
-			"summary":"Kinect Data Activity Visualization is designed to be an add-on visualization tool to the existing Kinect data analysis programs such as ELAN and ChronoViz for Gesture Researchers."
+			"summary":"Kinect Data Activity Visualization is designed to be an add-on visualization tool to the existing Kinect data analysis programs such as ELAN and ChronoViz for Gesture Researchers.",
+			"target":"Gesture Researchers such as ASL who use Microsoft Xbox Kinect",
+			"content":[
+				{
+					"top":"ActivityViz/Cover.jpg",
+					"left1":{
+						"title":"MAIN TOOLS.",
+						"body":"Node.js | MongoDB | Mustache | Passport | D3.js | x3dom | HTML | Bootstrap | Github | Heroku."
+					},
+					"right1":"ActivityViz/FinalSlide.png",
+					"left2":"ActivityViz/3D-frontalview.png",
+					"right2":"ActivityViz/3D-sideview.png"
+				},
+				{
+					"title":"Infrastructure Diagram",
+					"top":"ActivityViz/Idea3.png",
+					"left1":{
+						"title":"INFRASTRUCTURE DIAGRAM.",
+						"body":"We intended to gather data (CSV format) from the XBox Kinect, process the CSV data through an operating system, then generate a 3D visualization that provides direct manipulation by using d3.js and x3dom. "
+					},
+					"right1":"ActivityViz/CSVSample.png",
+					"left2":"ActivityViz/d3.jpg",
+					"right2":"ActivityViz/x3dom.jpg"
+				}
+			],
+			"note":"Demo Instruction: create an account or use username:zhenxzheng pw:123456789, skip uploading file by clicking on visualization button on nav bar to see visualization demo.",
+			"demoLink":"http://activiz.herokuapp.com/"
 		},
 		{
 			"id": 2,
 			"title": "UCSDMap",
-			"preview":"Project/UCSDMapPreview.jpg"
+			"url":"UCSDMap",
+			"preview":"Project/UCSDMapPreview.jpg",
+			"summary":"UCSDMap is designed for UCSD students, staffs, and all visitors to help navigate the campus of UCSD.",
+			"content":[
+				{
+					"top":"UCSDMap/Cover.jpg",
+					"left1":{
+						"title":"MAIN TOOLS.",
+						"body":"Node.js | Handlebars | JSON database | Google Map API | Google Analytic | HTML | Bootstrap | Github | Heroku."
+					},
+					"right1":"UCSDMap/testing.JPG",
+					"left2":"",
+					"right2":""
+				}
+			]
 		},
 		{
 			"id": 3,
-			"title": "OnMyBlockInterview",
+			"title": "OnMyBlock 2013 Interview",
+			"url": "OnMyBlock",
 			"preview":"Project/OMBPreview.jpg"
 		},
 		{
 			"id": 4,
-			"title": "PastFortfolio",
+			"title": "Past Portfolios",
+			"url":"PastPortfolios",
 			"preview":"Project/PortfolioPreview.jpg"
 		},
 		{
 			"id": 5,
-			"title": "ResumeDesign",
+			"title": "Resume Design",
+			"url": "ResumeDesign",
 			"preview":"Project/ResumePreview.jpg"
 		},
 		{
 			"id": 6,
-			"title": "SocialFitness",
+			"title": "Social Fitness",
+			"url": "SocialFitness",
 			"preview":"Project/SocialFitnessPreview.jpg"
 		},
 		{
 			"id": 7,
-			"title": "Park&Go",
+			"title": "Park & Go",
+			"url": "ParknGo",
 			"preview":"Project/PnGPreview.jpg"
 		},
 		{
 			"id": 8,
-			"title": "DragonBall",
+			"title": "Icon Design",
+			"url": "IconDesign",
 			"preview":"Project/DBPreview.jpg"
 		}
 	]
