@@ -2,6 +2,7 @@
 
 var $isMobile = null,
 	$mainElement = null;
+var preload;
 var windowWidth = 0,
 	windowHeight = 0,
 	mainN = 1;
@@ -48,9 +49,10 @@ $(document).ready(function(){
 	windowWidth=$(window).width();
 	windowHeight=$(window).height();
 
+
 	updateMainElement();
 	mainResize();
-	layoutResize();
+	// layoutResize();
 	windowResize();
 	setHeader();
 	$('#main').scroll(function(){
@@ -59,6 +61,7 @@ $(document).ready(function(){
 	$('#main2').scroll(function(){
 		headerScroll();
 	});
+	loading();
 });
 
 function updateMainElement()
@@ -96,14 +99,18 @@ function layoutResize(){
 function mainResize(){
 	windowWidth=$(window).width();
 	windowHeight=$(window).height();
-	$('#main').css('height',windowHeight);
-	$('#main2').css('height',windowHeight);
+
+	
 	if(mainN == 1){
 		$('#main').css("top",0);
+		$('#main').css('height',windowHeight);
+		$('#main2').css('height',0);
 		$('#main2').css("top",windowHeight);
 	}
 	else {
 		$('#main2').css("top",0);
+		$('#main2').css('height',windowHeight);
+		$('#main').css('height',0);
 		$('#main').css("top",windowHeight);
 	}
 }
@@ -128,6 +135,20 @@ function windowResize(){
 	});
 }
 
+function loading(){
+	if (preload != null) preload.onload=null;
+
+	var url = "url(\"../photo1.JPG\")";
+	preload  = new Image();
+	preload.onload = function(){
+		$mainElement.find('splashHome').css("background-image", url);
+	}
+	window.setTimeout(function(){
+		$mainElement.css("opacity", 1);
+		$('#main2').css("opacity",1);
+		layoutResize();
+	}, 600);
+}
 
 /*
  * Header functions

@@ -116,6 +116,7 @@ header ul li a:hover{
 	margin:0;
 	overflow:auto;
 	display:block;
+	opacity:0;
 }
 #splashAbout{
 	background: url("../PingPong.jpg");

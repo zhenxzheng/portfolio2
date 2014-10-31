@@ -189,7 +189,7 @@
                         $('#main').html(contentHtml).ajaxify();
 
                         $('#main2').removeClass('active').addClass('goaway');
-                        $('#main2').css('top', 2*$(window).height()/3 )
+                        $('#main2').css('top', 2*$(window).height()/3 );
 
                         $('#main').addClass( mypages[ myindex ] );
                         $('#main').css('height', $(window).height());
