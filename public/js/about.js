@@ -47,11 +47,22 @@ function validation(name, email, message){
 
 	var validitymsg = "validated";
 
+	$('#messageName, #messageEmail, #messageContent').css("border-color","black");
+
 	if (nameMatch!=name || emailMatch!=email || message=="") {
 		validitymsg = "Something is not right..\n";
-		if (nameMatch!=name){validitymsg = validitymsg+"\nInvalid Name. [English Letters Only]";}
-		if (emailMatch!=email){validitymsg = validitymsg+"\nInvalid E-mail. [John.Smith@example.com]";}
-		if (message==""){validitymsg = validitymsg+"\nEmpty Message. ";}
+		if (nameMatch!=name){
+			validitymsg = validitymsg+"\nInvalid Name. [English Letters Only]";
+			$('#messageName').css("border-color","red");
+		}
+		if (emailMatch!=email){
+			validitymsg = validitymsg+"\nInvalid E-mail. [John.Smith@example.com]";
+			$('#messageEmail').css("border-color","red");
+		}
+		if (message==""){
+			validitymsg = validitymsg+"\nEmpty Message. ";
+			$('#messageContent').css("border-color","red");
+		}
 	}
 	return validitymsg;
 }

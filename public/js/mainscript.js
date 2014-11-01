@@ -147,7 +147,7 @@ function loading(){
 		$mainElement.css("opacity", 1);
 		$('#main2').css("opacity",1);
 		layoutResize();
-	}, 600);
+	}, 1000);
 }
 
 /*
