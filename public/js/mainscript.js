@@ -8,7 +8,8 @@ var windowWidth = 0,
 	mainN = 1;
 	//indexes to keep track of pages and in ajaxify.js
 var myindex,
-	previndex;
+	previndex,
+	destination;
 
 var mypages = [
 	'home',
@@ -49,6 +50,8 @@ $(document).ready(function(){
 	windowWidth=$(window).width();
 	windowHeight=$(window).height();
 
+	document.addEventListener("scroll", headerScroll, false);
+	document.addEventListener("touchmove", headerScroll, false);
 
 	updateMainElement();
 	mainResize();
@@ -62,34 +65,38 @@ $(document).ready(function(){
 		headerScroll();
 	});
 	loading();
+	if(mypages[myindex] == "home") destination = $('.home').find('.aboutMe').offset().top;
 });
 
+
+/*
+ * Update main content Selector 
+ */
 function updateMainElement()
 {
 	if (mainN == 1) {$mainElement = $('#main')}
 	else ($mainElement = $('#main2'));
 }
 
+/*
+ * Resize splash images
+ */
 function layoutResize(){
-	if (mypages[myindex] == 'home'||
-		mypages[myindex] == 'about')
-		{
-		$mainElement.find(".splash").css({"height": windowHeight});
-		if(mypages[myindex] == 'home'){
-			var titleWidth = $('#splashHome .splashTitle h2').width();
-			window.setTimeout(function(){
-				$('#splashHome .splashTitle .line').css({"width": titleWidth});
-				    window.setTimeout(function(){
-				    	$('#zxz, #designs').css('opacity',1);
-				    	window.setTimeout(function(){
-				    		$('#zxz, #designs').removeClass();
-				    		$('header').removeClass("hideHeader").addClass("showHeader");
-				    		$('.nextSection').css("bottom","3%");
-				    		// $('#splashHome span').removeClass("cubicBezier");
-				    	},1000);
-				    },600);
-			},600);
-		}
+	$mainElement.find(".splash").css({"height": windowHeight});
+	if (mypages[myindex]=="home"){
+		var titleWidth = $('#splashHome .splashTitle h2').width();
+		window.setTimeout(function(){
+			$('#splashHome .splashTitle .line').css({"width": titleWidth});
+			    window.setTimeout(function(){
+			    	$('#zxz, #designs').css('opacity',1);
+			    	window.setTimeout(function(){
+			    		$('#zxz, #designs').removeClass();
+			    		$('header').removeClass("hideHeader").addClass("showHeader");
+			    		$('.nextSection').css("bottom","3%");
+			    		// $('#splashHome span').removeClass("cubicBezier");
+			    	},1000);
+			    },600);
+		},600);
 	}
 }
 
@@ -138,10 +145,10 @@ function windowResize(){
 function loading(){
 	if (preload != null) preload.onload=null;
 
-	var url = "url(\"../photo1.JPG\")";
+	var url = "url(\"../photo2.JPG\")";
 	preload  = new Image();
 	preload.onload = function(){
-		$mainElement.find('splashHome').css("background-image", url);
+		$mainElement.find('#splashHome').css("background-image", url);
 	}
 	window.setTimeout(function(){
 		$mainElement.css("opacity", 1);
@@ -160,21 +167,16 @@ function setHeader(){
 	if (mypages[myindex] == 'home'||
 		mypages[myindex] == 'about'){
 			$('header ul li a').css("color","white");
-			$('header').css("background","");
-			// $('header').css("box-shadow","");
-			$('header').css("border-bottom","");
-
+			$('header').removeClass("whiteHeader").addClass("transHeader");
 	}
 	//else black text header
 	else{
 		$('header ul li a').css("color","black");
-		$('header').css("background","white");
-		// $('header').css("box-shadow","0 0 10px #777");
-		$('header').css("border-bottom","solid 1px #777");
+		$('header').removeClass("transHeader").addClass("whiteHeader");
 
 	}
 	if($isMobile != null){
-		$('body').addClass('mobileMode');
+		$('body').addClass("mobileMode");
 	}
 }
 //header scrolling function 
@@ -182,23 +184,35 @@ var prevScroll = 0;
 function headerScroll(){
 	var currScroll = $mainElement.scrollTop();
 
-	if (mypages[myindex] == 'home'||
-	mypages[myindex] == 'about'){
-		if (currScroll > $(window).height()-$('header ul li').height()){
-			$('header ul li a').css("color","black");
-		}
-		else {
-			$('header ul li a').css("color","white");
-		}
-		if (currScroll > $(window).height()){
-			$('header').css("background","white");
-			$('header').css("border-bottom","solid 1px #777");
-		}
-		else {
-			$('header').css("background","");
-			$('header').css("border-bottom","");
-		}	
-	}
+	// if (mypages[myindex] == 'home'||
+	// mypages[myindex] == 'about'){
+
+		if ($mainElement.find(".splash").length > 0)
+			for (var i=0; i< $mainElement.find(".splash").length; i++){
+				if ($mainElement.find(".splash:eq("+i+")").offset().top < 1 &&
+					$mainElement.find(".splash:eq("+i+")").offset().top > ($(window).height()-$('header ul li').height())*-1){
+					$('header ul li a').css("color","white");
+					$('header').removeClass("whiteHeader").addClass("transHeader");
+					break;
+				}
+				else{
+					$('header ul li a').css("color","black");
+					$('header').removeClass("transHeader").addClass("whiteHeader");
+				}
+			}
+	// 	if (currScroll > $(window).height()-$('header ul li').height()){
+	// 		$('header ul li a').css("color","black");
+	// 	}
+	// 	else {
+	// 		$('header ul li a').css("color","white");
+	// 	}
+	// 	if (currScroll > $(window).height()){
+	// 		$('header').removeClass("transHeader").addClass("whiteHeader");
+	// 	}
+	// 	else {
+	// 		$('header').removeClass("whiteHeader").addClass("transHeader");
+	// 	}	
+	// }
 
 
 	//scroll up/down for header hide/show
@@ -212,7 +226,8 @@ function headerScroll(){
 
 }
 
+
 function scrollDown(){
-	var destination = $('.home').find('.aboutMe').offset().top;  
+	// var destination = $('.home').find('.aboutMe').offset().top;  
     $mainElement.animate({ scrollTop: destination}, 500 );
 }
