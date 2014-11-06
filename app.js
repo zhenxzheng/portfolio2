@@ -11,7 +11,6 @@ var index = require('./routes/index');
 var about = require('./routes/about');
 var projects = require('./routes/projects');
 
-
 //database setup - uncomment to set up your database
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost/zxzdesigns');
