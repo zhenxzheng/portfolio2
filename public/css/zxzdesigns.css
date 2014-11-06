@@ -294,6 +294,7 @@ a.button:hover{
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
 }
+
 footer ul li{
 	font-size:14px;
 	line-height:37px;
@@ -444,7 +445,6 @@ p.demoNote{
 	}
 	form textarea{
 		margin-top:2%;
-		margin-bottom:7%;
 	}
 	.project div{
 		line-height:0;
@@ -486,10 +486,10 @@ p.demoNote{
 form input,
 form textarea{
 	width:100%;
-	padding:5px 20px;
+	padding:7px 35px 7px 20px;
 	font-size:1em;
 	line-height:1.3em;
-	border: solid black 1px;
+	border: solid gray 1px;
 }
 form textarea{
 	height:200px;
@@ -497,7 +497,29 @@ form textarea{
 }
 form input:focus,
 form textarea:focus{
-	border-color:blue;
+	border-color:black!important;
+}
+#messageName, #messageEmail, #messageContent{
+	position:relative;
+	width:100%;
+}
+.validation{
+	position:absolute !important;
+	right:10px;
+	top:50% !important;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	-o-transform: translate(0, -50%);
+}
+.red{
+	color:red;
+}
+.green{
+	color:green;
+}
+#sent:hover{
+	background-color:white !important;
 }
 .grid-half:nth-child(2){
 	margin-right:0;
@@ -651,8 +673,8 @@ left: 0;
 .nextSection a:hover{
 	opacity:1;
 }
-#sent{
-	color:#00FF00;
+#error{
+	color:red;
 	opacity:0;
 	-ms-transition: all 1s;
 	-webkit-transition: all 1s;

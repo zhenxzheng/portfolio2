@@ -66,18 +66,28 @@
         <form class="container">
           <div class="center">
             <div class="grid-half">
-              <input type="text" placeholder="Name" id="messageName">
+              <div id="messageName">
+                <input type="text" placeholder="Name">
+                <span class="validation"></span>
+              </div>
+            </input>
             </div>
             <div class="grid-half">
-              <input type="text" placeholder="E-mail" id="messageEmail">
+              <div id="messageEmail">
+                <input type="text" placeholder="E-mail">
+                <span class="validation"></span>
+              </div>
             </div>
           </div>
           <div class="center">
-            <textarea type="text" placeholder="Hello!" id="messageContent"></textarea>
+            <div id="messageContent">
+              <textarea type="text" placeholder="Hello!"></textarea>
+              <span class="validation"></span>
+            </div>
           </div>
           <p class="centerText">
+            <span id="error"></span><br>
             <a class="button" id="messageButton" href="javascript:sendMessage();">Send Message</a>
-          </br><span id="sent"></span>
           </p>
         </form>
       </section>
