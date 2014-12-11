@@ -1,21 +1,23 @@
 'use strict';
 
+checkMobile();
+
 window.setTimeout(function(){
 	$('header').removeClass("hideHeader").addClass("showHeader");
 },700);
 
-$('#messageName').focusout(function(){
-	autoValidate($(this));
+$('#messageName').change(function(){
+	validate($(this));
 });
-$('#messageEmail').focusout(function(){
-	autoValidate($(this));
+$('#messageEmail').change(function(){
+	validate($(this));
 });
-$('#messageContent').focusout(function(){
-	autoValidate($(this));
+$('#messageContent').change(function(){
+	validate($(this));
 });
 
 
-function autoValidate(selector){
+function validate(selector){
 	var pattern, input;
 	var $input;
 	if ($(selector).attr('id') == $('#messageName').attr('id')){
@@ -44,6 +46,7 @@ function autoValidate(selector){
 		$(selector).find('.validation').removeClass("glyphicon glyphicon-ok green").addClass("glyphicon glyphicon-remove red");
 		$input.css("border-color","red");
 	}
+	return validated;
 }
 function sendMessage() {
 	// $('#messageButton').click(function(e){
@@ -52,9 +55,23 @@ function sendMessage() {
 		var date = new Date();
 		var message = $('#messageContent textarea').val();
 
-		var validity = validation(name,email,message);
-		if (validity == "validated"){
-			var confirmEmail = prompt("E-mail confirmation.\nPlease re-enter your E-mail to send your message.").toLowerCase();
+
+		var validitymsg = "validated"
+		if (!validate($('#messageName')) || !validate($('#messageEmail')) || !validate($('#messageContent'))){
+			validitymsg ="Something is not right..\n";
+			if (!validate($('#messageName'))){
+				validitymsg = validitymsg+"\nInvalid Name. [Alphabet A-Z Only]";
+			}
+			if (!validate($('#messageEmail'))){
+				validitymsg = validitymsg+"\nInvalid E-mail. [John.Smith@example.com]";
+			}
+			if (!validate($('#messageContent'))){
+					validitymsg = validitymsg+"\nEmpty Message. ";
+			}
+		}
+
+		if (validitymsg == "validated"){
+			var confirmEmail = prompt("Please re-enter your Email address to send your message.").toLowerCase();
 			if (confirmEmail == email)
 			{
 				var json = {
@@ -72,43 +89,14 @@ function sendMessage() {
 				});
 			}
 			else{
-				$('#error').text("Email Confirmation Failed :( Please Try Again.").css("opacity",1);
+				$('#error').text("The two Email addresses that you entered did not match :( Please Try Again.").css("opacity",1);
 			}
 		}
 		else{
-			alert(validity);
+			alert(validitymsg);
 		}
 
 	// });
-}
-
-function validation(name, email, message){
-	var nameRegExp = /[a-zA-Z ]+/;
-	var emailRegExp = /[a-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)\b/;
-
-	var nameMatch = name.match(nameRegExp);
-	var emailMatch = email.match(emailRegExp);
-
-	var validitymsg = "validated";
-
-	$('#messageName, #messageEmail, #messageContent').css("border-color","black");
-
-	if (nameMatch!=name || emailMatch!=email || message=="") {
-		validitymsg = "Something is not right..\n";
-		if (nameMatch!=name){
-			validitymsg = validitymsg+"\nInvalid Name. [English Letters Only]";
-			$('#messageName').css("border-color","red");
-		}
-		if (emailMatch!=email){
-			validitymsg = validitymsg+"\nInvalid E-mail. [John.Smith@example.com]";
-			$('#messageEmail').css("border-color","red");
-		}
-		if (message==""){
-			validitymsg = validitymsg+"\nEmpty Message. ";
-			$('#messageContent').css("border-color","red");
-		}
-	}
-	return validitymsg;
 }
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

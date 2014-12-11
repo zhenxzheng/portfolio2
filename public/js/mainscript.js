@@ -64,8 +64,13 @@ $(document).ready(function(){
 	$('#main2').scroll(function(){
 		headerScroll();
 	});
-	loading();
+
 	if(mypages[myindex] == "home") destination = $('.home').find('.aboutMe').offset().top;
+
+	//keyScroll();
+	//checkMobile();
+	loadingHome();
+	$mainElement.focus();
 });
 
 
@@ -83,20 +88,21 @@ function updateMainElement()
  */
 function layoutResize(){
 	$mainElement.find(".splash").css({"height": windowHeight});
+
 	if (mypages[myindex]=="home"){
-		var titleWidth = $('#splashHome .splashTitle h2').width();
-		window.setTimeout(function(){
-			$('#splashHome .splashTitle .line').css({"width": titleWidth});
-			    window.setTimeout(function(){
-			    	$('#zxz, #designs').css('opacity',1);
-			    	window.setTimeout(function(){
-			    		$('#zxz, #designs').removeClass();
-			    		$('header').removeClass("hideHeader").addClass("showHeader");
-			    		$('.nextSection').css("bottom","3%");
-			    		// $('#splashHome span').removeClass("cubicBezier");
-			    	},1000);
-			    },600);
-		},600);
+		var titleWidth = $('#code').width();
+		$('#splashHome .splashTitle .line').css({"width": titleWidth});
+		    window.setTimeout(function(){
+		    	$('#code, #design').css('opacity',1);
+		    	$('#code').css('top',0);
+		    	$('#design').css('bottom',0);
+		    	window.setTimeout(function(){
+		    		$('#code, #design').removeClass();
+		    		$('header').removeClass("hideHeader").addClass("showHeader");
+		    		$('.nextSection').css("bottom","3%");
+		    		$('#splashHome span').removeClass("cubicBezier");
+		    	},800);
+		    },600);
 	}
 }
 
@@ -127,34 +133,33 @@ function mainResize(){
  */
 function windowResize(){
 	$(window).resize(function(){
-		if( $isMobile != null ){
-			if($(window).width() != windowWidth && $(window).height != windowHeight ){
-			  	mainResize();
-			  	layoutResize();
-			}
-		}
-		else{
+		// if( $isMobile != null ){
+		// 	if($(window).width() != windowWidth && $(window).height != windowHeight ){
+		// 	  	mainResize();
+		// 	  	layoutResize();
+		// 	}
+		// }
+		// else{
 			if($(window).width() != windowWidth || $(window).height() != windowHeight ){
 				mainResize();
 				layoutResize();
 			}
-		}     
+		// }     
 	});
 }
 
-function loading(){
+function loadingHome(){
 	if (preload != null) preload.onload=null;
 
-	var url = "url(\"../photo2.JPG\")";
+	var url = "url(\"../photo1.JPG\")";
 	preload  = new Image();
+	preload.src = "../photo1.JPG";
 	preload.onload = function(){
 		$mainElement.find('#splashHome').css("background-image", url);
-	}
-	window.setTimeout(function(){
 		$mainElement.css("opacity", 1);
 		$('#main2').css("opacity",1);
 		layoutResize();
-	}, 1000);
+	}
 }
 
 /*
@@ -175,14 +180,12 @@ function setHeader(){
 		$('header').removeClass("transHeader").addClass("whiteHeader");
 
 	}
-	if($isMobile != null){
-		$('body').addClass("mobileMode");
-	}
 }
 //header scrolling function 
 var prevScroll = 0;
+var currScroll = 0;
 function headerScroll(){
-	var currScroll = $mainElement.scrollTop();
+	currScroll = $mainElement.scrollTop();
 
 	// if (mypages[myindex] == 'home'||
 	// mypages[myindex] == 'about'){
@@ -228,6 +231,66 @@ function headerScroll(){
 
 
 function scrollDown(){
-	// var destination = $('.home').find('.aboutMe').offset().top;  
-    $mainElement.animate({ scrollTop: destination}, 500 );
+
+    if ($isMobile == null) $mainElement.animate({ scrollTop: destination}, 500 );
+    else $mainElement.animate({scrollTop: $('.aboutMe').offset().top},500)
 }
+
+function checkMobile(){
+	if($isMobile != null){
+		$('body').addClass("mobileMode");
+		// $('.button').bind('touchstart',function(){
+		// 	$('.button').css({	"background":"#373737",
+		// 						"color":"#fff"});
+		// 	console.log("touch started");
+
+		// });
+		// $('.button').bind('touchend',function(){
+		// 	$('.button').css({	"background":"#fff",
+		// 						"color":"#373737"});
+		// 	console.log("touch ended");
+		// });
+		// $('#mutt .button').bind('touchstart',function(){
+		// 	$('.button').css({	"background":"#fff",
+		// 						"color":"#000"});
+		// 	console.log("touch started");
+
+		// });
+		// $('#mutt .button').bind('touchend',function(){
+		// 	$('.button').css({	"background":"transparent",
+		// 						"color":"#fff"});
+		// 	console.log("touch ended");
+		// });
+	}
+}
+
+// function keyScroll(){
+
+// 	document.getElementsByTagName("body")[0].onkeydown = function(e){
+// 		console.log("key pressed");
+
+// 		if (document.activeElement == $("body")[0]){
+// 			var charCode = e.keyCode || e.charCode;
+// 			if (charCode == 40){
+// 				if (currScroll < $mainElement[0].scrollHeight-$mainElement.height()){
+// 					currScroll = currScroll + 40;
+// 					$mainElement.scrollTop(currScroll);
+// 					console.log("down key");
+// 				}
+// 			}
+// 			else if (charCode == 38){
+// 				if (currScroll > 40){
+// 					currScroll = currScroll - 40;
+// 					$mainElement.scrollTop(currScroll);
+// 					console.log("up key");
+// 				}
+// 				else if (currScroll > 0){
+// 					currScroll = 0;
+// 					$mainElement.scrollTop(currScroll);
+// 					console.log("up key");
+// 				}
+
+// 			}
+// 		}
+// 	}
+// }

@@ -1,5 +1,7 @@
 'use strict';
 
+checkMobile();
+
 window.setTimeout(function(){
 	$('header').removeClass("hideHeader").addClass("showHeader");
 },700);

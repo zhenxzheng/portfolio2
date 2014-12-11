@@ -158,6 +158,7 @@
                     if (mainN == 1){
                         mainN = 2;
                         updateMainElement();
+                        $mainElement.focus();
 
                         $('#main2').stop(true,true);
                         $('#main2').append( contentHtml ).ajaxify();
@@ -184,6 +185,8 @@
                     else{
                         mainN = 1;
                         updateMainElement();
+                        $mainElement.focus();
+                        
                         $('#main').stop(true,true);
                         $('#main').append( contentHtml ).ajaxify();
                         $('#main').html(contentHtml).ajaxify();

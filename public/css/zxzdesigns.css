@@ -62,7 +62,7 @@ a{
 	margin-left:auto;
 	margin-right:auto;
 	overflow:hidden !important;
-	padding-top:3.3em;
+	padding-top:4.3em;
 	*zoom:1;
 }
 img{
@@ -71,6 +71,9 @@ img{
 }
 form.container{
 	width:100%;
+}
+.center.container, .project.container{
+	padding-top:0;
 }
 .grid-half, .grid-thirds{
 	width:100%;
@@ -146,6 +149,15 @@ header ul li a:hover{
 /*#splashHome{
 	background: url("../photo1.jpg");
 }*/
+#code,#design{
+	position:relative;
+}
+#code{
+	top:0.1em;
+}
+#design{
+	bottom:0.1em;
+}
 #mutt{
 	background: url("../photo4.JPG");
 	width:100%;
@@ -168,8 +180,12 @@ header ul li a:hover{
 	border-color:#fff;
 }
 #mutt .button:hover{
-	background:white;
-	color:black;
+	background:#fff;
+	color:#000;
+}
+.mobileMode #mutt .button:hover{
+	color:inherit;
+	background:inherit;
 }
 .splashTitle{
 	position: absolute;
@@ -191,12 +207,26 @@ header ul li a:hover{
 	line-height:.5em;
 	display: inline-block;
 }
-.easeIn{
-	-ms-transition: all 1s ease-in;
-	-webkit-transition: all 1s ease-in;
-	-moz-transition: all 1s ease-in;
-	-o-transition: all 1s ease-in;
-	transition: all 1s ease-in;
+.ease{
+	-ms-transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+.easein{
+	-ms-transition: all 0.8s ease-in;
+	-webkit-transition: all 0.8s ease-in;
+	-moz-transition: all 0.8s ease-in;
+	-o-transition: all 0.8s ease-in;
+	transition: all 0.8s ease-in;
+}
+.easeout{
+	-ms-transition: all 0.8s ease-out;
+	-webkit-transition: all 0.8s ease-out;
+	-moz-transition: all 0.8s ease-out;
+	-o-transition: all 0.8s ease-out;
+	transition: all 0.8s ease-out;
 }
 #splashAbout .splashTitle h1{
 	color:#fff;
@@ -218,7 +248,7 @@ header ul li a:hover{
 }
 .splash .splashTitle .line{
 	background:#fff;
-	height:2px;
+	height:3px;
 	display:block;
 	margin:0 auto;
 	width:0;
@@ -294,7 +324,10 @@ a.button:hover{
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
 }
-
+.mobileMode a.button:hover{
+	background:inherit;
+	color:inherit;
+}
 footer ul li{
 	font-size:14px;
 	line-height:37px;
@@ -497,7 +530,8 @@ form textarea{
 }
 form input:focus,
 form textarea:focus{
-	border-color:black!important;
+	outline:none!important;
+	border-color:black;
 }
 #messageName, #messageEmail, #messageContent{
 	position:relative;
