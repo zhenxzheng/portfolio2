@@ -68,7 +68,7 @@ $(document).ready(function(){
 	if(mypages[myindex] == "home") destination = $('.home').find('.aboutMe').offset().top;
 
 	//keyScroll();
-	//checkMobile();
+	checkMobile();
 	loadingHome();
 	$mainElement.focus();
 });
@@ -245,6 +245,7 @@ function scrollDown(){
 function checkMobile(){
 	if($isMobile != null){
 		$('body').addClass("mobileMode");
+		$('.splash').css("background-attachment","scroll");
 		// $('.button').bind('touchstart',function(){
 		// 	$('.button').css({	"background":"#373737",
 		// 						"color":"#fff"});
