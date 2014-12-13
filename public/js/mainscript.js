@@ -99,7 +99,7 @@ function layoutResize(){
 		    	window.setTimeout(function(){
 		    		$('#code, #design').removeClass();
 		    		$('header').removeClass("hideHeader").addClass("showHeader");
-		    		$('.nextSection').css("bottom","3%");
+		    		$('.nextSection').css("top","87%");
 		    		$('#splashHome span').removeClass("cubicBezier");
 		    	},800);
 		    },600);
@@ -151,9 +151,9 @@ function windowResize(){
 function loadingHome(){
 	if (preload != null) preload.onload=null;
 
-	var url = "url(\"../photo1.JPG\")";
+	var url = "url(\"../HomeCover.jpg\")";
 	preload  = new Image();
-	preload.src = "../photo1.JPG";
+	preload.src = "../HomeCover.jpg";
 	preload.onload = function(){
 		$mainElement.find('#splashHome').css("background-image", url);
 		$mainElement.css("opacity", 1);
@@ -226,7 +226,13 @@ function headerScroll(){
 		$('header').removeClass("hideHeader").addClass("showHeader");
 	}
 	prevScroll = currScroll;
-
+	
+	// $('#splashHome').css({"height": windowHeight-currScroll});
+	//hides down arrow when past a quarter of the home page
+	if (currScroll > (windowHeight/4)) {
+		$('.nextSection').css("opacity", 0);
+	}
+	else $('.nextSection').css("opacity", 1);
 }
 
 
