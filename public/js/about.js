@@ -18,25 +18,29 @@ $('#messageContent').change(function(){
 
 
 function validate(selector){
-	var pattern, input;
+	var pattern, input, match, validated;
 	var $input;
 	if ($(selector).attr('id') == $('#messageName').attr('id')){
 		pattern = /[a-zA-Z ]+/;
 		$input = $(selector).find('input');
 		input = $input.val().toUpperCase();
+		match = input.match(pattern);
+		validated = (match == input ? true : false);
 	}
 	else if ($(selector).attr('id') == $('#messageEmail').attr('id')){
 		pattern = /[a-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)\b/;
 		$input = $(selector).find('input');
 		input = $input.val().toLowerCase();
+		match = input.match(pattern);
+		validated = (match == input ? true : false);
 	}
 	else if ($(selector).attr('id') == $('#messageContent').attr('id')){
-		pattern = /.+/;
 		$input = $(selector).find('textarea');
 		input = $input.val();
+		validated = (input != '' ? true : false);
 	}
-	var match = input.match(pattern);
-	var validated = (match == input ? true : false);
+	// var match = input.match(pattern);
+	// var validated = (match == input ? true : false);
 
 	if (validated){
 		$(selector).find('.validation').removeClass("glyphicon glyphicon-remove red").addClass("glyphicon glyphicon-ok green");
