@@ -22,7 +22,10 @@ var mypages = [
 		'ResumeDesign',		//5
 		'SocialFitness',	//6
 		'ParknGo',			//7
-		'IconDesign'		//8
+		'IconDesign',		//8
+		'DancingTails',
+		'SFMuseum',
+	'instagram'
 ];
 var myscripts = [
 	'../js/home.js',
@@ -35,7 +38,10 @@ var myscripts = [
 		'../../js/default.js',	//5
 		'../../js/default.js',	//6
 		'../../js/default.js',	//7
-		'../../js/default.js'	//8
+		'../../js/default.js',	//8
+		'../../js/default.js',	//9
+		'../../js/default.js',	//10
+	'../js/default.js'
 ];
 
 
@@ -88,8 +94,8 @@ function updateMainElement()
  */
 function layoutResize(){
 	$mainElement.find(".splash").css({"height": windowHeight});
-
 	if (mypages[myindex]=="home"){
+		$('#splashHome .splashTitle .line').addClass("cubicBezier");
 		var titleWidth = $('#code').width();
 		$('#splashHome .splashTitle .line').css({"width": titleWidth});
 		    window.setTimeout(function(){
@@ -98,6 +104,7 @@ function layoutResize(){
 		    	$('#design').css('bottom',0);
 		    	window.setTimeout(function(){
 		    		$('#code, #design').removeClass();
+		    		$('#splashHome .splashTitle .line').removeClass("cubicBezier");
 		    		$('header').removeClass("hideHeader").addClass("showHeader");
 		    		$('.nextSection').css("top","87%");
 		    		$('#splashHome span').removeClass("cubicBezier");
@@ -113,7 +120,6 @@ function mainResize(){
 	windowWidth=$(window).width();
 	windowHeight=$(window).height();
 
-	
 	if(mainN == 1){
 		$('#main').css("top",0);
 		$('#main').css('height',windowHeight);
@@ -133,18 +139,10 @@ function mainResize(){
  */
 function windowResize(){
 	$(window).resize(function(){
-		// if( $isMobile != null ){
-		// 	if($(window).width() != windowWidth && $(window).height != windowHeight ){
-		// 	  	mainResize();
-		// 	  	layoutResize();
-		// 	}
-		// }
-		// else{
-			if($(window).width() != windowWidth || $(window).height() != windowHeight ){
-				mainResize();
-				layoutResize();
-			}
-		// }     
+		if($(window).width() != windowWidth || $(window).height() != windowHeight ){
+			mainResize();
+			layoutResize();
+		}
 	});
 }
 
@@ -170,7 +168,8 @@ function loadingHome(){
 function setHeader(){
 	//if home or about page, white text header for image background
 	if (mypages[myindex] == 'home'||
-		mypages[myindex] == 'about'){
+		mypages[myindex] == 'about'||
+		mypages[myindex] == 'instagram'){
 			$('header ul li a').css("color","white");
 			$('header').removeClass("whiteHeader").addClass("transHeader");
 	}

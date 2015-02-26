@@ -88,6 +88,18 @@
 			"title": "Icon Design",
 			"url": "IconDesign",
 			"preview":"Project/IconPreview.jpg"
+		},
+		{
+			"id": 9,
+			"title": "SF Museum",
+			"url": "SFMuseum",
+			"preview":"Project/SFMPreview.jpg"
+		},
+		{
+			"id": 10,
+			"title": "Dancing Tails",
+			"url": "DancingTails",
+			"preview":"Project/DancingPreview.jpg"
 		}
 	]
 }
