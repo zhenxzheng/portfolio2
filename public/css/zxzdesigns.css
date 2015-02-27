@@ -75,7 +75,7 @@ form.container{
 .center.container, .project.container{
 	padding-top:0;
 }
-.grid-half, .grid-thirds{
+.grid-half, .grid-thirds, .grid-fourths{
 	width:100%;
 	display:inline-block; 
 	margin-bottom:0.5em;
@@ -137,6 +137,7 @@ header ul li a:hover{
 	text-align: center;
 	position:relative;
 }
+
 #splashHome{
 	background: url("../HomeCover.jpg");
 	width:100%;
@@ -456,6 +457,21 @@ p.demoNote{
 	    -webkit-box-pack: center;
 	    box-pack: center;
 	}
+	.grid-fourths{
+		width: 20%;
+	    margin-right: 9.09090909%;
+	    margin-top: auto !important;
+	    margin-bottom: auto !important;
+	    display: -moz-box;
+	    display: -webkit-box;
+	    display: box;
+	    -moz-box-orient: vertical;
+	    -webkit-box-orient: vertical;
+	    box-orient: vertical;
+	    -moz-box-pack: center;
+	    -webkit-box-pack: center;
+	    box-pack: center;
+	}
 	a.button{
 		padding: 15px 50px;
 	}
@@ -464,8 +480,11 @@ p.demoNote{
 		margin-right:5%;
 		margin-top:0 !important;
 	}
-	.projects .grid-thirds img{
+	.projects .grid-thirds img,.projects .grid-half img{
 		margin-bottom:1em;
+	}
+	.projects .grid-half img{
+		max-width:100% !important;
 	}
 	form.container{
 		width:70%;
@@ -570,7 +589,7 @@ form textarea:focus{
 	padding:1%;
 	text-align:center;
 }
-.projects .grid-thirds img{
+.projects .grid-thirds img, .projects .grid-half img{
 	max-width:400px;
 	width:100%;
 	height:auto;
