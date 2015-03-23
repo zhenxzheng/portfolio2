@@ -142,9 +142,9 @@ function windowResize(){
 function loadingHome(){
 	if (preload != null) preload.onload=null;
 
-	var url = "url(\"../HomeCover2.jpg\")";
+	var url = "url(\"../HomeCover2.JPG\")";
 	preload  = new Image();
-	preload.src = "../HomeCover2.jpg";
+	preload.src = "../HomeCover2.JPG";
 	preload.onload = function(){
 		$mainElement.find('#splashHome').css("background-image", url);
 		$mainElement.css("opacity", 1);
