@@ -71,7 +71,7 @@ $(document).ready(function(){
 		headerScroll();
 	});
 
-	if(mypages[myindex] == "home") destination = $('.home').find('.aboutMe').offset().top;
+	if(mypages[myindex] == "home") destination = $('.home').find('.whatIdo').offset().top;
 
 	//keyScroll();
 	checkMobile();
@@ -95,16 +95,9 @@ function updateMainElement()
 function layoutResize(){
 	$mainElement.find(".splash").css({"height": windowHeight});
 	if (mypages[myindex]=="home"){
-		$('#splashHome .splashTitle .line').addClass("cubicBezier");
-		var titleWidth = $('#code').width();
-		$('#splashHome .splashTitle .line').css({"width": titleWidth});
 		    window.setTimeout(function(){
-		    	$('#code, #design').css('opacity',1);
-		    	$('#code').css('top',0);
-		    	$('#design').css('bottom',0);
+		    	$('#line1, #line2, #line3').removeClass('hideBottom');
 		    	window.setTimeout(function(){
-		    		$('#code, #design').removeClass();
-		    		$('#splashHome .splashTitle .line').removeClass("cubicBezier");
 		    		$('header').removeClass("hideHeader").addClass("showHeader");
 		    		$('.nextSection').css("top","87%");
 		    		$('#splashHome span').removeClass("cubicBezier");
@@ -149,9 +142,9 @@ function windowResize(){
 function loadingHome(){
 	if (preload != null) preload.onload=null;
 
-	var url = "url(\"../HomeCover.jpg\")";
+	var url = "url(\"../HomeCover2.jpg\")";
 	preload  = new Image();
-	preload.src = "../HomeCover.jpg";
+	preload.src = "../HomeCover2.jpg";
 	preload.onload = function(){
 		$mainElement.find('#splashHome').css("background-image", url);
 		$mainElement.css("opacity", 1);
@@ -238,7 +231,7 @@ function headerScroll(){
 function scrollDown(){
 
     if ($isMobile == null) $mainElement.animate({ scrollTop: destination}, 500 );
-    else $mainElement.animate({scrollTop: $('.aboutMe').offset().top},500)
+    else $mainElement.animate({scrollTop: $('.whatIdo').offset().top},500)
 }
 
 function checkMobile(){
