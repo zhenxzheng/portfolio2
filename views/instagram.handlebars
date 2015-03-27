@@ -2,11 +2,10 @@
 
 <html>
 <head>
-	<title>Projects</title>	
+	<title>Instagram</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <link rel="icon" type="image/png" href="../favicon.ico">
-	
+	<link rel="icon" type="image/png" href="../favicon.ico">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,38 +25,24 @@
       <li><a href="/home">Home</a></li>
       <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
       <li><a href="/projects">Projects</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">About&Contact</a></li>
     </ul>
   </header>
-  <div id="main" class="projects" tabindex="-1">
+  <div id="main" class="about" tabindex="-1">
     <div id="content" class="container">
-      <section>
-        <h1>Projects</h1>
+      <section class="instagram">
+        <div class="grid-half">
+          <img src="{{profileImg}}">
+        </div>
+        <h1>{{username}}</h1>
+
+        {{#each imageArray}}
         <div class="center">
           <div class="grid-half">
-            <a href="/projects/{{projects.9.url}}"><figure class="grid4"><div style="background-image: url('{{projects.9.preview}}')" class="bgImg"></div></figure></a>
-          </div>
-          <div class="grid-half">
-            <a href="/projects/{{projects.8.url}}"><figure class="grid4"><div style="background-image: url('{{projects.8.preview}}')" class="bgImg"></div></figure></a>
+            <img src="{{url}}">
           </div>
         </div>
-        <div class="center">
-          <div class="grid-thirds">
-            <a href="/projects/{{projects.0.url}}"><figure class="grid6"><div style="background-image: url('{{projects.0.preview}}')" class="bgImg"></div></figure></a>
-            <a href="/projects/{{projects.1.url}}"><figure class="grid7"><div style="background-image: url('{{projects.1.preview}}')" class="bgImg"></div></figure></a>
-          </div>
-          <div class="grid-thirds">
-            <a href="/projects/{{projects.2.url}}"><figure class="grid5"><div style="background-image: url('{{projects.2.preview}}')" class="bgImg"></div></figure></a>
-            <a href="/projects/{{projects.3.url}}"><figure class="grid4"><div style="background-image: url('{{projects.3.preview}}')" class="bgImg"></div></figure></a>
-            <a href="/projects/{{projects.4.url}}"><figure class="grid4"><div style="background-image: url('{{projects.4.preview}}')" class="bgImg"></div></figure></a>
-          </div>
-          <div class="grid-thirds">
-            <a href="/projects/{{projects.7.url}}"><figure class="grid4"><div style="background-image: url('{{projects.7.preview}}')" class="bgImg"></div></figure></a>
-            <a href="/projects/{{projects.5.url}}"><figure class="grid4"><div style="background-image: url('{{projects.5.preview}}')" class="bgImg"></div></figure></a>
-            <a href="/projects/{{projects.6.url}}"><figure class="grid5"><div style="background-image: url('{{projects.6.preview}}')" class="bgImg"></div></figure></a>
-          </div>
-        </div>
+        {{/each}}
       </section>
     </div>
     <footer>
@@ -68,8 +53,7 @@
             <li><a href="/home">Home</a></li>
             <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about">About & Contact</a></li>
           </ul>
         </div>
         <div>

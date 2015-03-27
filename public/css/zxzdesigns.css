@@ -35,17 +35,6 @@ h2{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-button{
-	margin: auto;
-	width: 100%;
-	background: none;
-	outline: none;
-	border: none;
-	padding: 0;
-	margin-bottom: 1em;
-	line-height: 1.3em;
-	font-size: 100%;
-}
 p{
 	margin-left:auto;
 	margin-right:auto;
@@ -94,6 +83,10 @@ p a:hover{
 figure{
 	position:relative;
 	overflow:hidden;
+}
+.whatIdo figure a{
+	width:100%;
+	height:200px;
 }
 .whatIdo figure a:before{
 	position:absolute;
@@ -244,11 +237,13 @@ header ul li a:hover{
 }
 .splashTitle h1{
 	color:#fff;
-	font-size:7vw;
+	font-size:7.5vw;
+	font-size:4.57em;
 }
 .splashTitle h2{
 	color:#fff;
 	font-size:7.5vw;
+	font-size:4.57em;
 	margin-bottom:0;
 	line-height:1em;
 	text-align:center;
@@ -267,12 +262,15 @@ header ul li a:hover{
 }
 #line1{
 	font-size:7.5vw !important;
+	font-size:4.57em;
 }
 #line2{
 	font-size:3vw !important;
+	font-size:1.82em;
 }
 #line3{
 	font-size:5vw !important;
+	font-size:3.05em;
 }
 
 #mutt{
@@ -287,6 +285,7 @@ header ul li a:hover{
 }
 #mutt p a{
 	position:absolute;
+	left:50%;
 	bottom:13%;
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
@@ -405,6 +404,7 @@ header ul li a:hover{
 .whatIdo figure{
 	display:inline-block;
 	line-height:0;
+	height:200px;
 	float:left;
 }
 .bgImg{
@@ -425,8 +425,8 @@ ul{
 }
 .center:before{
 	display:table;
-	width:100%;
 	content:'';
+	clear:both;
 }
 a.button{
 	border: 1px solid #bdc3c7;
