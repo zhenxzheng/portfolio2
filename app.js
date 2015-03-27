@@ -11,7 +11,7 @@ var index = require('./routes/index');
 var about = require('./routes/about');
 var contact = require('./routes/contact');
 var projects = require('./routes/projects');
-var instagram = require('./routes/instagram');
+// var instagram = require('./routes/instagram');
 
 //database setup - uncomment to set up your database
 var mongoose = require('mongoose');
@@ -22,9 +22,9 @@ var dotenv = require('dotenv');
 dotenv.load();
 
 //add instagram api setup
-var ig = require('instagram-node-lib');
-ig.set('client_id', process.env.instagram_client_id);
-ig.set('client_secret', process.env.instagram_client_secret);
+// var ig = require('instagram-node-lib');
+// ig.set('client_id', process.env.instagram_client_id);
+// ig.set('client_secret', process.env.instagram_client_secret);
 
 //Configures the Template engine
 app.engine('handlebars', handlebars());
@@ -43,7 +43,7 @@ app.get('/contact', contact.view);
 app.get('/projects', projects.view);
 app.get('/projects/:url', projects.viewProject);
 app.get('/messages', contact.viewMessage);
-app.get('/instagram', instagram.view);
+// app.get('/instagram', instagram.view);
 
 app.post('/messages/new', contact.saveMessage);
 
