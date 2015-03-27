@@ -16,7 +16,7 @@ if (mypages[myindex] == "projects"){
     ga('send', {
 	    'hitType':'pageview',
 	    'page':'/projects'
-  });
+    });
 }
 else{
 	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -28,5 +28,5 @@ else{
     ga('send', {
 	    'hitType':'pageview',
 	    'page':'/projects/'+mypages[myindex]
-  });
+    });
 }

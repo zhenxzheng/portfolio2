@@ -2,9 +2,9 @@
 
 <html>
 <head>
-	<title>Past Portfolio</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Contact Me | ZXZDesigns</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="icon" type="image/png" href="../favicon.ico">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -13,9 +13,9 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->        
-      <link rel="stylesheet" type="text/css" href="../css/cleanup.css">
-      <link rel="stylesheet" type="text/css" href="../css/zxzdesigns.css">
-      <link rel="stylesheet" type="text/css" href="../css/icons.css">
+      <link rel="stylesheet" type="text/css" href="css/cleanup.css">
+      <link rel="stylesheet" type="text/css" href="css/zxzdesigns.css">
+      <link rel="stylesheet" type="text/css" href="css/icons.css">
       <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
@@ -29,31 +29,52 @@
       <li><a href="/contact">Contact</a></li>
     </ul>
   </header>
-  <div id="main" class="1" tabindex="-1">
-    <div id="content" class="container">
-      <section class="project">
-        <h1>Past Porfolio</h1>
-        <div>
-          <div>
-            <img src="../Project/PastPortfolios/main.jpg">
-          </div>
-        </div>
-        <div class="center">
-          <div class="grid-half">
-            <img src="../Project/PastPortfolios/top.jpg">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/PastPortfolios/bottom.jpg">
-          </div>
-        </div>
-        <div class="center">
-          <p class="note panel">
-              The whole portfolio is handled entirely by Javascript and JQuery. All contents are on JSON files and they are being rendered by AJAX requests.
-          </p>
-        </div>
+  <div id="main" class="about" tabindex="-1">
+    <div class="splash" id="splashContact">
+      <section class="splashTitle">
+        <h1>Hello!</h1>
+      </section>
+      <div class="nextSection">
+        <a href="javascript:scrollDown('.contactMe')">
+          <span class="glyphicon glyphicon-chevron-down" id="downArrow"></span>
+        </a>
+      </div>
+    </div>
+    <div class="container">
+      <section class="contactMe">
+        <h1>Contact Me</h1>
         <p class="centerText">
-          <a class="button" href="http://zxzdesigns201407.herokuapp.com/" target="_blank" class="no-ajaxy">Demo<span class="glyphicon glyphicon-new-window"></a>
+          I am currently working with a few local businesses and non-profitable organizations as a web application designer/developer, but I am seeking a full time role as a Graphic/UI/UX designer/developer. Please drop a line and say hi :)
         </p>
+        <form class="container">
+          <div class="center">
+            <div class="grid-half">
+              <div id="messageName">
+                <input type="text" placeholder="Name">
+                <span class="validation"></span>
+              </div>
+            </input>
+            </div>
+            <div class="grid-half">
+              <div id="messageEmail">
+                <input type="text" placeholder="E-mail">
+                <span class="validation"></span>
+              </div>
+            </div>
+          </div>
+          <div class="center">
+            <div id="messageContent">
+              <textarea type="text" placeholder="Hello!"></textarea>
+              <span class="validation"></span>
+            </div>
+          </div>
+          <p class="center">
+            <span id="error"></span><br>
+            <button class="center">
+              <a class="button" id="messageButton" href="javascript:sendMessage();">Send Message</a>
+            </button>
+          </p>
+        </form>
       </section>
     </div>
     <footer>
@@ -80,9 +101,8 @@
       </div>
     </footer>
   </div>
-
   <div id="main2" tabindex="-1"></div>
-  
+ 
   <!-- jQuery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -93,9 +113,9 @@
   <script src="//browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
 
   <!-- Ajaxify -->
-  <script src="../js/ajaxify.js"></script>
+  <script src="js/ajaxify.js"></script>
   <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
-  <script src="../js/mainscript.js"></script>
-  <script src="../js/default.js"></script>
+  <script src="js/mainscript.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>

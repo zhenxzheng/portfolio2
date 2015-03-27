@@ -25,7 +25,8 @@
       <li><a href="/home">Home</a></li>
       <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
       <li><a href="/projects">Projects</a></li>
-      <li><a href="/about">About&Contact</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </header>
   <div id="main" class="about" tabindex="-1">
@@ -37,90 +38,80 @@
 
     <div id="content" class="container">
       <section class="aboutMe">
-        <p class="large">
-          I’m Zhen (/zen) and I currently live in San Francisco.
-        </p>
-        <p class="large">
-          I love pushing pixels, designing products, improving my coding abilities and crafting everything from scratch. See my work on my portfolio.
-        </p>
-        <div class="center">
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>UI/UX Designer</strong><br/>
-              I create interfaces that are clean, efficient, and visually pleasing.
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>Graphic Designer</strong><br/>
-              I design graphics & icons to visually convey the meaning of the brand.
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>Web Developer</strong><br/>
-              I build custom web applications for local businesses and organizations.
-            </p>
-          </div>
-        </div>
-        <div class="center">
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>UC Graduate</strong><br/>
-              I have a B.S. in Human Computer Interaction (HCI) from UC San Diego.
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>Ice-Cream Lover</strong><br/>
-              I love all ice-cream. My current favorite flavor is Three Twins Lemon Cookie.
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>Dog-Rescuer</strong><br/>
-              I rescued two dogs from the shelter. Check them out on Instagram.
-            </p>
-          </div>
-        </div>
-        <p class="centerText">
-          <a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy button">My Resume<span class="glyphicon glyphicon-new-window"></span></a>
-        </p>
-      </section>
-    </div>
-    <div class="container">
-      <section class="contactMe">
-        <h1>Contact Me</h1>
-        <p class="centerText">
-          I am currently working with a few local businesses and non-profitable organizations as a web application designer/developer, but I am seeking a full time role as a Graphic/UI/UX designer/developer. Please drop a line and say hi :)
-        </p>
-        <form class="container">
-          <div class="center">
-            <div class="grid-half">
-              <div id="messageName">
-                <input type="text" placeholder="Name">
-                <span class="validation"></span>
-              </div>
-            </input>
-            </div>
-            <div class="grid-half">
-              <div id="messageEmail">
-                <input type="text" placeholder="E-mail">
-                <span class="validation"></span>
-              </div>
-            </div>
-          </div>
-          <div class="center">
-            <div id="messageContent">
-              <textarea type="text" placeholder="Hello!"></textarea>
-              <span class="validation"></span>
-            </div>
-          </div>
-          <p class="centerText">
-            <span id="error"></span><br>
-            <a class="button" id="messageButton" href="javascript:sendMessage();">Send Message</a>
+        <h2>About me</h2>
+        <div class="panel">
+          <p>
+            I’m Zhen (/zen/) and I currently live in San Francisco.
           </p>
-        </form>
+          <p>
+            I love pushing pixels, designing products, improving my coding abilities and crafting everything from scratch. See my work on my <a href="/projects">portfolio</a>.
+          </p>
+        </div>
+        <div id="bio">
+          <div class="grid-thirds">
+            <div class="panel">
+              <p>
+                <strong>UI/UX Designer</strong>
+              </p>
+              <p class="small">
+                I create interfaces that are clean, efficient, and visually pleasing.
+              </p>
+            </div>
+          </div>
+          <div class="grid-thirds">
+            <div class="panel">
+              <p>
+                <strong>Graphic Designer</strong>
+              </p>
+              <p class="small">
+                I design graphics & icons to visually convey the meaning of the brand.
+              </p>
+            </div>
+          </div>
+          <div class="grid-thirds">
+            <div class="panel">
+              <p>
+                <strong>Web Developer</strong>
+              </p>
+              <p class="small">
+                I build custom web applications for local businesses and organizations.
+              </p>
+            </div>
+          </div>
+          <div class="grid-thirds">
+            <div class="panel">
+              <p>
+                <strong>UC Graduate</strong>
+              </p>
+              <p class="small">
+                I have a B.S. in Human Computer Interaction from UC San Diego.
+              </p>
+            </div>
+          </div>
+          <div class="grid-thirds">
+            <div class="panel">
+              <p>
+                <strong>Ice-Cream Lover</strong>
+              </p>
+              <p class="small">
+                I love all ice-cream. My current favorite flavor is Three Twins Lemon Cookie.
+              </p>
+            </div>
+          </div>
+          <div class="grid-thirds">
+            <div class="panel">
+              <p>
+                <strong>Dog-Rescuer</strong>
+              </p>
+              <p class="small">
+                I rescued two dogs from the shelter. Check them out on Instagram.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="center">
+          <a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy button">My Resume<span class="glyphicon glyphicon-new-window"></span></a>
+        </button>
       </section>
     </div>
     <footer>
@@ -131,7 +122,8 @@
             <li><a href="/home">Home</a></li>
             <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About & Contact</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <div>

@@ -8,12 +8,12 @@ var windowWidth = 0,
 	mainN = 1;
 	//indexes to keep track of pages and in ajaxify.js
 var myindex,
-	previndex,
-	destination;
+	previndex;
 
 var mypages = [
 	'home',
 	'about',
+	'contact',
 	'projects',
 		'ActivityViz',		//1
 		'UCSDMap',			//2
@@ -30,6 +30,7 @@ var mypages = [
 var myscripts = [
 	'../js/home.js',
 	'../js/about.js',
+	'../js/contact.js',
 	'../js/default.js',
 		'../../js/default.js',	//1
 		'../../js/default.js',	//2
@@ -70,8 +71,6 @@ $(document).ready(function(){
 	$('#main2').scroll(function(){
 		headerScroll();
 	});
-
-	if(mypages[myindex] == "home") destination = $('.home').find('.whatIdo').offset().top;
 
 	//keyScroll();
 	checkMobile();
@@ -162,7 +161,7 @@ function setHeader(){
 	//if home or about page, white text header for image background
 	if (mypages[myindex] == 'home'||
 		mypages[myindex] == 'about'||
-		mypages[myindex] == 'instagram'){
+		mypages[myindex] == 'contact'){
 			$('header ul li a').css("color","white");
 			$('header').removeClass("whiteHeader").addClass("transHeader");
 	}
@@ -228,10 +227,9 @@ function headerScroll(){
 }
 
 
-function scrollDown(){
-
-    if ($isMobile == null) $mainElement.animate({ scrollTop: destination}, 500 );
-    else $mainElement.animate({scrollTop: $('.whatIdo').offset().top},500)
+function scrollDown(destination){
+    if ($isMobile == null) $mainElement.animate({ scrollTop: $mainElement.find(destination).offset().top}, 500 );
+    else $mainElement.animate({scrollTop: $mainElement.find(destination).offset().top},500)
 }
 
 function checkMobile(){

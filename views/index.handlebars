@@ -26,76 +26,96 @@
       <li><a href="/home">Home</a></li>
       <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
       <li><a href="/projects">Projects</a></li>
-      <li><a href="/about">About&Contact</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </header>
   <div id="main" class="home active" tabindex="-1">
     <div class="splash" id="splashHome">
       <section class="splashTitle">
-        <h2 id="line1" class="ease hideBottom">Hi, I'm Zhen</h2>
-        <h2 id="line2" class="ease hideBottom">and I like to code & design</h2>
-        <h2 id="line3" class="ease hideBottom">user experience</h2>
+        <h2 id="line1" class="delay0 ease hideBottom">Hi, I'm Zhen</h2>
+        <h2 id="line2" class="delay1 ease hideBottom">and I like to code & design</h2>
+        <h2 id="line3" class="delay2 ease hideBottom">user experience</h2>
       </section>
       <div class="nextSection">
-        <a href="javascript:scrollDown()">
+        <a href="javascript:scrollDown('.whatIdo')">
           <span class="glyphicon glyphicon-chevron-down" id="downArrow"></span>
         </a>
       </div>
     </div>
-
     <div id="content" class="container">
       <section class="whatIdo">
         <h2>Some of my projects</h2>
-        <p class="small">Design Tools: Photoshop, Illustrator, Wireframe, Prototype</p>
-        <p class="small">Technical Tools: HTML/CSS, Jade, MEAN (MongoDB, ExpressJS, AngularJS, NodeJS)
+        <p>Design: Photoshop, Illustrator, Axure, Lucidchart</p>
+        <p>Technical: HTML/CSS, Jade, MEAN (MongoDB, ExpressJS, AngularJS, NodeJS)
         <div class="container">
           <figure class="grid-thirds">
-            <img class="bgImg" style="background-image:url('Project/IconDesign/CognectionLogo.jpg')">
+            <a href="/projects/ParknGo">
+              <img class="bgImg" style="background-image:url('Project/PnGPreview.jpg')">
+              <figcaption class="ease">
+                <h2>Park & Go</h2>
+              </figcaption>
+            </a>
           </figure>
           <figure class="grid-thirds">
-            <img class="bgImg" style="background-image:url('Project/IconDesign/ActivityViz-basic.jpg')">
+            <a href="/projects/IconDesign">
+              <img class="bgImg" style="background-image:url('Project/IconDesign/ActivityViz-basic.jpg')">
+              <figcaption class="ease">
+                <h2>Icons & Logos</h2>
+              </figcaption>
+            </a>
           </figure>
           <figure class="grid-thirds">
-            <img class="bgImg" style="background-image:url('Project/DancingPreview.jpg')">
+            <a href="/projects/ParknGo">
+              <img class="bgImg" style="background-image:url('Project/DancingPreview.jpg')">
+              <figcaption class="ease">
+                <h2>Dancing Tails</h2>
+              </figcaption>
+            </a>
           </figure>
           <figure class="grid-thirds">
-            <img class="bgImg" style="background-image:url('Project/ActivityViz/Cover.jpg')">
+            <a href="/projects/ActivityViz">
+              <img class="bgImg" style="background-image:url('Project/ActivityViz/Cover.jpg')">
+              <figcaption class="ease">
+                <h2>Activity Viz</h2>
+              </figcaption>
+            </a>
           </figure>
           <figure class="grid-thirds">
-            <img class="bgImg" style="background-image:url('Project/SocialFitness/AffinityDiagram2.jpg')">
+            <a href="/projects/SocialFitness">
+              <img class="bgImg" style="background-image:url('Project/SocialFitness/AffinityDiagram2.jpg')">
+              <figcaption class="ease">
+                <h2>Affinity Wall</h2>
+              </figcaption>
+            </a>
           </figure>
           <figure class="grid-thirds">
-            <img class="bgImg" style="background-image:url('Project/ResumeDesign/Resume2014.jpg')">
+            <a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">
+              <img class="bgImg" style="background-image:url('Project/ResumeDesign/Resume2014.jpg')">
+              <figcaption class="ease">
+                <h2>Resume</h2>
+              </figcaption>
+            </a>
           </figure>
         </div>
-        <div class="center">
-          <div class="grid-half">
-            <p class="centerText">
-              <a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy button">My Resume<span class="glyphicon glyphicon-new-window"></span></a>
-            </p>
-          </div>
-          <div class="grid-half">
-            <p class="centerText">
-              <a class="button" href="/projects">My Projects</a>
-            </p>
-          </div>
-        </div>
+        <button class="center">
+          <a class="button" href="/projects">My Projects</a>
+        </button>
       </section>
-    </div>
-    <section class="splash" id="mutt">
-      <p class="centerText"><a class="no-ajaxy button" href="https://instagram.com/zhenito/" target="_blank">Instagram</a></p>
-    </section>
-    <div class="container">
       <section class="aboutMe">
             <figure>
               <img src="Zhen.jpg">
             </figure>
             <p class="large">
-              Hi! I'm Zhen (/zen/) and I'm a Graphic/UI/UX designer in San Francisco. I have a B.S. in Human Computer Interaction from the University of California San Diego. I have a passion for designing products, building applications, and updating my coding ability. 
+              Hi! I'm Zhen (/zen/) and I'm a Graphic/UI/UX designer in San Francisco. I love pushing pixels, designing products, improving my coding abilities and crafting everything from scratch. See my work on my <a href="/projects">portfolio</a>. 
             </p>
-        <p class="centerText"><a class="button" href="/about">About & Contact</a></p>
+        <button class="center"><a class="button" href="/about">About Me</a></button>
       </section>
     </div>
+
+    <section class="splash" id="mutt">
+      <p class="center"><a class="no-ajaxy button" href="https://instagram.com/zhenito/" target="_blank">Instagram</a></p>
+    </section>
     <footer>
       <div>
         <div>
@@ -104,7 +124,8 @@
             <li><a href="/home">Home</a></li>
             <li><a href="/Resume/FlatResumeWeb.pdf" target="_blank" class="no-ajaxy">Resume</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About & Contact</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <div>
