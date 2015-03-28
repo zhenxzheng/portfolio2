@@ -71,10 +71,12 @@ $(document).ready(function(){
 	$('#main2').scroll(function(){
 		headerScroll();
 	});
-
+	$mainElement.css("opacity", 1);
+	$('#main2').css("opacity",1);
+	layoutResize();
 	//keyScroll();
 	checkMobile();
-	loadingHome();
+	// loadingHome();
 	$mainElement.focus();
 });
 
@@ -139,17 +141,17 @@ function windowResize(){
 }
 
 function loadingHome(){
-	if (preload != null) preload.onload=null;
+	// if (preload != null) preload.onload=null;
 
-	var url = "url(\"../HomeCover2.JPG\")";
-	preload  = new Image();
-	preload.src = "../HomeCover2.JPG";
-	preload.onload = function(){
-		$mainElement.find('#splashHome').css("background-image", url);
-		$mainElement.css("opacity", 1);
-		$('#main2').css("opacity",1);
-		layoutResize();
-	}
+	// var url = "url(\"../HomeCover2.JPG\")";
+	// preload  = new Image();
+	// preload.src = "../HomeCover2.JPG";
+	// preload.onload = function(){
+	// 	$mainElement.find('#splashHome').css("background-image", url);
+	// 	$mainElement.css("opacity", 1);
+	// 	$('#main2').css("opacity",1);
+	// 	layoutResize();
+	// }
 }
 
 /*
