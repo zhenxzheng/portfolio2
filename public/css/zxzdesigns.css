@@ -1,6 +1,7 @@
 html,body{
 	background-color:#fff;
 	-webkit-overflow-scrolling:touch;
+	/*position:relative;*/
 }
 body{
 	font-size:94%;
@@ -10,6 +11,7 @@ body{
 	font-weight:400;
 	width:100%;
 	overflow:hidden !important; /*hides 2nd main*/
+	position:relative;
 }
 h1{
 	font-size:2.5em;
@@ -147,22 +149,22 @@ form.container{
 strong{
 	font-weight:900;
 }
-header{
+nav{
 	width:100%;
 	position:fixed;
 	z-index:4;
 }
-header ul{
+nav ul{
 	text-align:right;
 	margin:0 1em;
 	line-height:50px;
 }
-header ul li{
+nav ul li{
 	margin-right:10px;
 	display:inline;
 	font-size:12px;
 }
-header ul li a{
+nav ul li a{
 	color:#fff;
 	text-decoration: none;
 	padding:40px 0 0 0;
@@ -173,7 +175,7 @@ header ul li a{
 	-o-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
 }
-header ul li a:hover{
+nav ul li a:hover{
 	border-bottom: solid 1px;
 	padding-bottom:7px;
 }
@@ -208,7 +210,6 @@ header ul li a:hover{
 }
 #splashHome{
 	position:relative;
-	background-image: url("../HomeCover2.JPG");
 	width:100%;
 	height:100%;
 	background-size:cover;
@@ -228,22 +229,27 @@ header ul li a:hover{
 }
 #splashAbout .splashTitle{
 	left:auto;
+	top:auto;
+	bottom:50%;
 	width:52%;
 	right:5%;
-	-webkit-transform: translate(0%, -50%);
-	-moz-transform: translate(0%, -50%);
-	-ms-transform: translate(0%, -50%);
-	-o-transform: translate(0%, -50%);
+	-webkit-transform: translate(0%, 50%);
+	-moz-transform: translate(0%, 50%);
+	-ms-transform: translate(0%, 50%);
+	-o-transform: translate(0%, 50%);
+}
+#splashContact .splashTitle{
+	opacity:0;
 }
 .splashTitle h1{
 	color:#fff;
-	font-size:7.5vw;
 	font-size:4.57em;
+	font-size:7.5vw;
 }
 .splashTitle h2{
 	color:#fff;
-	font-size:7.5vw;
 	font-size:4.57em;
+	font-size:7.5vw;
 	margin-bottom:0;
 	line-height:1em;
 	text-align:center;
@@ -261,16 +267,17 @@ header ul li a:hover{
 	bottom:0;
 }
 #line1{
+	font-size:4.57em !important;
 	font-size:7.5vw !important;
-	font-size:4.57em;
+
 }
 #line2{
+	font-size:1.82em !important;
 	font-size:3vw !important;
-	font-size:1.82em;
 }
 #line3{
+	font-size:3.05em !important;
 	font-size:5vw !important;
-	font-size:3.05em;
 }
 
 #mutt{
@@ -321,53 +328,7 @@ header ul li a:hover{
 	border-bottom:none;
 }
 
-.ease{
-	-ms-transition: all 0.8s ease;
-	-webkit-transition: all 0.8s ease;
-	-moz-transition: all 0.8s ease;
-	-o-transition: all 0.8s ease;
-	transition: all 0.8s ease;
-}
-.easein{
-	-ms-transition: all 0.8s ease-in;
-	-webkit-transition: all 0.8s ease-in;
-	-moz-transition: all 0.8s ease-in;
-	-o-transition: all 0.8s ease-in;
-	transition: all 0.8s ease-in;
-}
-.easeout{
-	-ms-transition: all 0.8s ease-out;
-	-webkit-transition: all 0.8s ease-out;
-	-moz-transition: all 0.8s ease-out;
-	-o-transition: all 0.8s ease-out;
-	transition: all 0.8s ease-out;
-}
 
-.cubicBezier{
-	-ms-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
-	-webkit-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
-	-moz-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
-	-o-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
-	transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
-}
-.delay0{
-	-moz-transition-delay: 0s;
-	-o-transition-delay: 0s;
-	-webkit-transition-delay: 0s;
-	transition-delay: 0s;
-}
-.delay1{
-	-moz-transition-delay: .08s;
-	-o-transition-delay: .08s;
-	-webkit-transition-delay: .08s;
-	transition-delay: .08s;
-}
-.delay2{
-	-moz-transition-delay: .16s;
-	-o-transition-delay: .16s;
-	-webkit-transition-delay: .16s;
-	transition-delay: .16s;
-}
 .contactMe h1, .projects h1, .project h1{
 	margin-bottom:0.7em;
 }
@@ -721,7 +682,7 @@ p.demoNote{
 form input,
 form textarea{
 	width:100%;
-	padding:10px 35px 10px 20px;
+	padding:10px 45px 10px 20px;
 	font-size:20px;
 	line-height:1.3em;
 	border: solid #777 1px;
@@ -733,8 +694,8 @@ form textarea{
 form input:focus,
 form textarea:focus{
 	outline:none!important;
-	padding:8px 33px 8px 18px;
-	border:solid 3px #C2B49A;
+	padding:8px 43px 8px 18px;
+	border:solid 3px #5c210e;
 }
 #messageName, #messageEmail, #messageContent{
 	position:relative;
@@ -742,7 +703,7 @@ form textarea:focus{
 }
 .validation{
 	position:absolute !important;
-	right:10px;
+	right:20px;
 	top:50% !important;
 	-webkit-transform: translate(0, -50%);
 	-moz-transform: translate(0, -50%);
@@ -792,13 +753,138 @@ position: absolute;
 top: 0;
 left: 0;
 }*/
+.bottom{
+	bottom:0;
+	-ms-transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+.top{
+	top:0;
+	-ms-transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+.left{
+	left:0;
+	-ms-transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+.right{
+	right:0;
+	-ms-transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+.scale{
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	-ms-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+	-webkit-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+	-moz-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+	-o-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+	transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+}
 .hideBottom{
 	bottom:-50px !important;
 	opacity:0 !important;
 }
 .hideTop{
-	top: -10px;
-	opacity: 0;
+	top: -50px !important;
+	opacity: 0 !important;
+}
+.hideLeft{
+	left: -50px !important;
+	opacity: 0 !important;
+}
+.hideRight{
+	right: -50px !important;
+	opacity: 0 !important;
+}
+.scaleHide{
+	-webkit-transform: scale(0.2);
+	-moz-transform: scale(0.2);
+	-ms-transform: scale(0.2);
+	-o-transform: scale(0.2);
+	transform: scale(0.2);
+	opacity:0;
+}
+.ease{
+	-ms-transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+.easein{
+	-ms-transition: all 0.8s ease-in;
+	-webkit-transition: all 0.8s ease-in;
+	-moz-transition: all 0.8s ease-in;
+	-o-transition: all 0.8s ease-in;
+	transition: all 0.8s ease-in;
+}
+.easeout{
+	-ms-transition: all 0.8s ease-out;
+	-webkit-transition: all 0.8s ease-out;
+	-moz-transition: all 0.8s ease-out;
+	-o-transition: all 0.8s ease-out;
+	transition: all 0.8s ease-out;
+}
+
+.cubicBezier{
+	-ms-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+	-webkit-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+	-moz-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+	-o-transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+	transition: all 0.8s cubic-bezier(0,1.5,0.5,1);
+}
+.delay0{
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+.delay1{
+	-moz-transition-delay: .08s;
+	-o-transition-delay: .08s;
+	-webkit-transition-delay: .08s;
+	transition-delay: .08s;
+}
+.delay2{
+	-moz-transition-delay: .16s;
+	-o-transition-delay: .16s;
+	-webkit-transition-delay: .16s;
+	transition-delay: .16s;
+}
+.delay3{
+	-moz-transition-delay: .24s;
+	-o-transition-delay: .24s;
+	-webkit-transition-delay: .24s;
+	transition-delay: .24s;
+}
+.delay4{
+	-moz-transition-delay: .32s;
+	-o-transition-delay: .32s;
+	-webkit-transition-delay: .32s;
+	transition-delay: .32s;
+}
+.delay5{
+	-moz-transition-delay: .40s;
+	-o-transition-delay: .40s;
+	-webkit-transition-delay: .40s;
+	transition-delay: .40s;
 }
 .goaway {
 	-ms-transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -858,7 +944,11 @@ left: 0;
 	transform: scale(1);
 	z-index: 1;
 }
-.hideHeader{
+#splashAbout .hideBottom{
+	bottom:45% !important;
+	opacity:0;
+}
+.hideNav{
 	-ms-transition: all 0.8s ease;
 	-webkit-transition: all 0.8s ease;
 	-moz-transition: all 0.8s ease;
@@ -866,7 +956,7 @@ left: 0;
 	transition: all 0.8s ease;
 	top: -100px;
 }
-.showHeader{
+.showNav{
 	-ms-transition: all 0.8s ease;
 	-webkit-transition: all 0.8s ease;
 	-moz-transition: all 0.8s ease;
@@ -874,11 +964,11 @@ left: 0;
 	transition: all 0.8s ease;
 	top: 0px;
 }
-.whiteHeader{
+.whiteNav{
 	background:white;
 	border-bottom: solid #777 1px;
 }
-.transHeader{
+.transNav{
 	background: transparent;
 	border-bottom: none;
 }

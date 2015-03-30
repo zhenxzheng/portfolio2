@@ -268,7 +268,7 @@ function fetchfile(filename,filetype){
             tempfile.type='text/javascript';
             tempfile.src=filename;
             tempfile.onload = function(){
-                setHeader();
+                setNav();
             }
         }
         else if (filetype=="css"){

@@ -3,9 +3,10 @@
 checkMobile();
 
 window.setTimeout(function(){
-	$('header').removeClass("hideHeader").addClass("showHeader");
+	$('nav').removeClass("hideNav").addClass("showNav");
+	$('#splashContact .splashTitle').css('opacity',1);
 	$('.nextSection').css("top","87%");
-},700);
+},800);
 
 $('#messageName').change(function(){
 	validate($(this));
