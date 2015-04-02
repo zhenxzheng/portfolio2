@@ -54,120 +54,128 @@
             <li><h2 class="code">code</h2></li>
           </ul>
         </div>
-        <aside class="ux">
-          <h3>Target Users:</h3>
-          <p>
-            Dog owners. However, there are 2 differnet types of dog owners. The ones who know the concept and fundamental of dog training (let's call them the <strong>expert</strong>), and the ones who have little to no knowledge of dog training (the <strong>novice</strong>).
-          </p>
-          <h3>Challenge:</h3>
-          <p>
-            To determine what information is relevent to the users
-          </p>
-          <h3>Solution:</h3>
-          <p>
-            I created two user work-flow charts for both groups with the data that I gathered. The goal is to understand how a user appraoches the task of choosing a dog trainer and find out what key information drives the user's decision making process.
-          </p>
-        </aside>
-        <aside class="ux">
-          <figure class="grid-half">
-            <a href="../Project/DancingTails/novice.png" class="no-ajaxy" data-lightbox="challenge1" data-title="Novice Task Flow">
-              <img src="../Project/DancingTails/novice.png">
-              <figcaption>
-                <h2>Novice</h2>
-              </figcaption>
-            </a>
-          </figure>
-          <figure class="grid-half">
-            <a href="../Project/DancingTails/expert.png" class="no-ajaxy" data-lightbox="challenge1" data-title="Expert Task Flow">
-              <img src="/Project/DancingTails/expert.png">
-              <figcaption>
-                <h2>Expert</h2>
-              </figcaption>
-            </a>
-          </figure>
-        </aside>
-        <aside class="ux">
-          <h3>Challenge:</h3>
-          <p>
-            Although the nav bars with the main topics provide a quick access to the information that the users need, novice users who don't know what information to look for will most likely get confused. 
-          </p>
-          <h3>solution</h3>
-          <p>
-            I put a short text and button at the end of every page as a suggestion of what they should do next. This helps guide and educate the novice user through the choosing process. The design decision behind this feature is based on two reasons: 1.the power of suggestion. 2.the paradox of choice.
-          </p>
-        </aside>
-        <aside class="ux">
-          <figure>
-            <a href="../Project/DancingTails/pageEnd.png" class="no-ajaxy" data-lightbox="challenge2" data-title="Page End">
-              <img src="../Project/DancingTails/pageEnd.png">
-              <figcaption>
-                <h2>Page End</h2>
-              </figcaption>
-            </a>
-          </figure>
-        </aside>
-        <aside class="code">
-          <h3>
-            MAIN TOOLS
-          </h3>
-          <p>
-            MongoDB | Express.js | Angular.js | Node.js | JQuery | Jade | HTML | Github | Heroku | YouTube api
-          </p>
-        </aside>
-        <aside class="ux code">
-          <h3>Challenge:</h3>
-          <p>
-            The website was suffering from loading speed because it contains many high resolution images. 
-          </p>
-          <h3>solution</h3>
-          <p>
-            I created different resolutions of the same image. The site will load the low resolution first, then seamlessly preload the higher resolution ones depending on the user's viewport. Once the higher images is loaded, it will replace the low resolution one.
-          </p>
-        </aside>
-        <aside class="ux code">
-          <figure>
-            <a href="../Project/DancingTails/highResCode.png" class="no-ajaxy" data-lightbox="challenge3" data-title="Page End">
-              <img src="../Project/DancingTails/highResCode.png">
-              <figcaption>
-                <h2>Preload High Res Photos</h2>
-              </figcaption>
-            </a>
-          </figure>
-        </aside>
-        <aside class="ux code">
-          <h3>Challenge:</h3>
-          <p>
-            The HTML elements in the video page will show up first before the YouTube api request is completed, so the page looks like it has empty element and the user do not know that the request is still laoding. 
-          </p>
-          <h3>solution</h3>
-          <p>
-            Since the request speed can not be modified, a visual loading icon is added by using angular resolve while the request is being made. This provides a feedback to the user to let them know the page still being loaded and it has a more complete feel when the page shows up.
-          </p>
-        </aside>
-        <aside class="ux code">
-          <figure class="grid-half">
-            <a href="../Project/DancingTails/loading.png" class="no-ajaxy" data-lightbox="challenge4" data-title="Spinning Loading Icon">
-              <img src="../Project/DancingTails/loading.png">
-              <figcaption>
-                <h2>Spinning Loading Icon</h2>
-              </figcaption>
-            </a>
-          </figure>
-          <figure class="grid-half">
-            <a href="../Project/DancingTails/loadingCode.png" class="no-ajaxy" data-lightbox="challenge4" data-title="Angular Directive">
-              <img src="../Project/DancingTails/loadingCode.png">
-              <figcaption>
-                <h2>Angular Directive</h2>
-              </figcaption>
-            </a>
-          </figure>
-        </aside>
-        <aside class="graphic">
-          <figure>
-            <img src="../Project/DancingTails/DancingTailsResponsive.png">
-          </figure>
-
-        </aside> 
+        <div class="projectDetails">
+          <aside class="ux">
+            <h3>Target Users:</h3>
+            <p>
+              Dog owners. However, there are 2 differnet types of dog owners. The ones who know the concept and fundamental of dog training (let's call them the <strong>expert</strong>), and the ones who have little to no knowledge of dog training (the <strong>novice</strong>).
+            </p>
+            <h3>Challenge:</h3>
+            <p>
+              To determine what information is relevent to the users
+            </p>
+            <h3>Solution:</h3>
+            <p>
+              I created two user work-flow charts for both groups with the data that I gathered. The goal is to understand how a user appraoches the task of choosing a dog trainer and find out what key information drives the user's decision making process.
+            </p>
+          </aside>
+          <aside class="ux">
+            <figure class="grid-half">
+              <a href="../Project/DancingTails/novice.png" class="no-ajaxy" data-lightbox="challenge1" data-title="Novice Task Flow">
+                <img src="../Project/DancingTails/novice.png">
+                <figcaption>
+                  <h2>Novice</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/DancingTails/expert.png" class="no-ajaxy" data-lightbox="challenge1" data-title="Expert Task Flow">
+                <img src="/Project/DancingTails/expert.png">
+                <figcaption>
+                  <h2>Expert</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="ux">
+            <h3>Challenge:</h3>
+            <p>
+              Although the nav bars with the main topics provide a quick access to the information that the users need, novice users who don't know what information to look for will most likely get confused. 
+            </p>
+            <h3>solution</h3>
+            <p>
+              I put a short text and button at the end of every page as a suggestion of what they should do next. This helps guide and educate the novice user through the choosing process. The design decision behind this feature is based on two reasons: 1.the power of suggestion. 2.the paradox of choice.
+            </p>
+          </aside>
+          <aside class="ux">
+            <figure>
+              <a href="../Project/DancingTails/pageEnd.png" class="no-ajaxy" data-lightbox="challenge2" data-title="Page End">
+                <img src="../Project/DancingTails/pageEnd.png">
+                <figcaption>
+                  <h2>Page End</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="code">
+            <h3>
+              MAIN TOOLS
+            </h3>
+            <p>
+              MongoDB | Express.js | Angular.js | Node.js | JQuery | Jade | HTML | Github | Heroku | YouTube api
+            </p>
+          </aside>
+          <aside class="ux code">
+            <h3>Challenge:</h3>
+            <p>
+              The website was suffering from loading speed because it contains many high resolution images. 
+            </p>
+            <h3>solution</h3>
+            <p>
+              I created different resolutions of the same image. The site will load the low resolution first, then seamlessly preload the higher resolution ones depending on the user's viewport. Once the higher images is loaded, it will replace the low resolution one.
+            </p>
+          </aside>
+          <aside class="ux code">
+            <figure>
+              <a href="../Project/DancingTails/highResCode.png" class="no-ajaxy" data-lightbox="challenge3" data-title="Page End">
+                <img src="../Project/DancingTails/highResCode.png">
+                <figcaption>
+                  <h2>Preload High Res Photos</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="ux code">
+            <h3>Challenge:</h3>
+            <p>
+              The HTML elements in the video page will show up first before the YouTube api request is completed, so the page looks like it has empty element and the users do not know that the request is still processing. 
+            </p>
+            <h3>solution</h3>
+            <p>
+              Since the request speed can not be modified, I used angular directive and resolve to add a visual loading icon whenever a request is being made. This provides a feedback to the user to let them know that the page is not done loading.
+            </p>
+          </aside>
+          <aside class="ux code">
+            <figure class="grid-half">
+              <a href="../Project/DancingTails/loading.png" class="no-ajaxy" data-lightbox="challenge4" data-title="Spinning Loading Icon">
+                <img src="../Project/DancingTails/loading.png">
+                <figcaption>
+                  <h2>Spinning Loading Icon</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/DancingTails/loadingCode.png" class="no-ajaxy" data-lightbox="challenge4" data-title="Angular Directive">
+                <img src="../Project/DancingTails/loadingCode.png">
+                <figcaption>
+                  <h2>Angular Directive</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="ux code">
+            <h3>Other Features:</h3>
+            <p>
+              For users: click/tab to call and email | input form for messages<br>
+              For client: password protected pages | check/search messages | favorite messages
+            </p>
+          </aside>
+          <aside class="graphic">
+            <figure>
+              <img src="../Project/DancingTails/DancingTailsResponsive.png">
+            </figure>
+          </aside> 
+        </div>
       </section>
     </div>
     <footer>

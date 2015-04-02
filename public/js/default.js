@@ -9,30 +9,31 @@ window.setTimeout(function(){
 
 $('.category h2.graphic').addClass('categoryActive');
 $('.ux, .code').removeClass('asideActive');
-$('.ux img, .code img').css('height',0);
 $('.graphic').addClass('asideActive');
-$('.graphic img').css('height','auto');
+$('.projectDetails').css('opacity','1');
 
 $('.category h2').click(function(){
-    $('.category h2').removeClass('categoryActive');
-    $(this).addClass('categoryActive');
-    if ($(this).hasClass('graphic')) {
-        $('.ux, .code').removeClass('asideActive');
-        $('.ux img, .code img').css('height',0);
-        $('.graphic').addClass('asideActive');
-        $('.graphic img').css('height','auto');
-    }
-    else if ($(this).hasClass('ux')) {
-        $('.graphic, .code').removeClass('asideActive');
-        $('.graphic img, .code img').css('height',0);
-        $('.ux').addClass('asideActive');
-        $('.ux img').css('height','auto');
-    }
-    else if ($(this).hasClass('code')) {
-        $('.ux, .graphic').removeClass('asideActive');
-        $('.ux img, .graphic img').css('height',0);
-        $('.code').addClass('asideActive');
-        $('.code img').css('height','auto');
+    if (!$(this).hasClass('categoryActive')){
+        $mainElement.animate({scrollTop:$(".category").offset().top + $mainElement.scrollTop()}, '500', 'swing');
+        $('.category h2').removeClass('categoryActive');
+        $(this).addClass('categoryActive');
+        $('.projectDetails').css('opacity',0);
+        var selector = this;
+        window.setTimeout(function(){
+            if ($(selector).hasClass('graphic')) {
+                $('.ux, .code').removeClass('asideActive');
+                $('.graphic').addClass('asideActive');
+            }
+            else if ($(selector).hasClass('ux')) {
+                $('.graphic, .code').removeClass('asideActive');
+                $('.ux').addClass('asideActive');
+            }
+            else if ($(selector).hasClass('code')) {
+                $('.ux, .graphic').removeClass('asideActive');
+                $('.code').addClass('asideActive');
+            }
+            $('.projectDetails').css('opacity',1);
+        },800)
     }
 })
 if (mypages[myindex] == "projects"){

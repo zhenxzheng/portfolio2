@@ -546,25 +546,24 @@ ul{
 	border-left:solid 1px #eee;
 }
 .asideActive{
-	height:auto;
-	opacity:1;
+	display:block;
+}
+.projectDetails{
+	opacity:0;
+	overflow: hidden;
+	-ms-transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
 }
 aside{
-	height:0;
-	opacity:0;
-	-ms-transition: all 0.8s ease-out;
-	-webkit-transition: all 0.8s ease-out;
-	-moz-transition: all 0.8s ease-out;
-	-o-transition: all 0.8s ease-out;
-	transition: all 0.8s ease-out;
+	display:none;
 }
 aside:before{
 	clear:both;
 	display:table;
 	content:"";
-}
-aside img{
-	height:0;
 }
 a.button{
 	border: 1px solid #bdc3c7;
