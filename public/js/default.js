@@ -14,7 +14,7 @@ $('.projectDetails').css('opacity','1');
 
 $('.category h2').click(function(){
     if (!$(this).hasClass('categoryActive')){
-        $mainElement.animate({scrollTop:$(".category").offset().top + $mainElement.scrollTop()}, '500', 'swing');
+        $mainElement.animate({scrollTop:$(".category").offset().top + $mainElement.scrollTop()-$('nav').height()}, '500', 'swing');
         $('.category h2').removeClass('categoryActive');
         $(this).addClass('categoryActive');
         $('.projectDetails').css('opacity',0);

@@ -15,6 +15,7 @@
     <![endif]-->        
       <link rel="stylesheet" type="text/css" href="../css/cleanup.css">
       <link rel="stylesheet" type="text/css" href="../css/zxzdesigns.css">
+      <link href="../css/lightbox.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="../css/icons.css">
       <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
@@ -41,109 +42,160 @@
         <p class="centerText">
           Park & Go is a mobile/web parking payment application that aims to shorten user's time on a parking lot so that they can get to where they need to be faster. 
         </p>
-        <div>
-          <div>
-            <img src="../Project/ParknGo/ParknGo-Main.jpg">
-          </div>
-        </div>
         <div class="center">
-          <div class="grid-half">
-            <p class="small panel">
-              <strong>MAIN TOOLS</strong>
-              <br>
-              Javascript | HTML | Bootstrap | Github | PhotoShop
+          <ul class="category">
+            <li><h2 class="graphic">Graphic</h2></li>
+            <li><h2 class="ux">UX</h2></li>
+          </ul>
+        </div>
+        <div class="projectDetails">
+          <aside class="ux">
+            <h3>Target Users:</h3>
+            <p>
+              Anyone who drives and wishes to park in UCSD. Users include students, staff members, and visitors.
             </p>
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ParknGo/ParknGo-ParkingLotInfo.jpg">
-          </div>
-        </div>
-        <div class="center">
-          <div class="grid-half">
-            <img src="../Project/ParknGo/ParknGo-Main-Register.jpg">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ParknGo/ParknGo-Main-SignIn.jpg">
-          </div>
-        </div>
-        <div class="center">
-          <p class="small note panel">
-            <strong>WHAT/WHY</strong>
-            <br>
-            If you've been to UCSD, you'd already know that parking on campus is terrible. Either you are circling around the parking lot or campus for an hour trying to find a parking space, or waiting in line for that super slow machine to take everyone's payment and print a permit, almost everyone is spending more time than they should be inside those parking lots.
-            <br>
-            <br>
-            Overall, we are looking at 2 problems that we need to solve here: 1. to reduce time for finding a parking space; 2. to reduce time for lining up to pay.
-          </p>
-        </div>
-        <div>
-          <div>
-            <img src="../Project/ParknGo/Storyboard-1.jpg">
-          </div>
-        </div>
-        <div class="center">
-          <div class="grid-half">
-            <p class="small panel">
-              <strong>STORYBOARDS:</strong>
-              <br>
-              To present & focus on the main issues, and the potential benefits that the application can bring.
+            <h3>Challenge:</h3>
+            <p>
+              UCSD is infamous for its horrible parking experience. Users would spend up to an hour trying to find a parking space, and then wait in line for that super slow payment machine that has trouble reading credit/debit card to print a permit. My goal was to reduce the time in finding a parking space and in lining up for payment.
             </p>
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ParknGo/Storyboard-3.jpg">
-          </div>
-        </div>
-        <div>
-          <div>
-            <img src="../Project/ParknGo/Storyboard-2.jpg">
-          </div>
-        </div>
-        <div class="center">
-          <p class="small note panel">
-            Due to assignment preference, only the front-end desktop web application was developed. However, a mobile version and future plan for this idea will be dicussed later.
-          </p>
-        </div>
-        <div class="center">
-          <div class="grid-half">
-            <img src="../Project/ParknGo/PaperPrototypeMain.JPG">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ParknGo/PaperPrototypeParkingLot.JPG">
-          </div>
-        </div>
-        <div class="center">
-          <div class="grid-half">
-            <img src="../Project/ParknGo/PaperPrototypeMainRegister.JPG">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ParknGo/PaperPrototypeMainSignIn.JPG">
-          </div>
-        </div>
-        <div class="center">
-          <img src="../Project/ParknGo/MobileDesignIdea.JPG">
-        </div>
-        <div class="center">
-          <div class="grid-thirds">
-            <p class="small note panel">
-              <strong>Future Idea 1</strong>
+            <h3>Solution:</h3>
+            <p>
+              My idea was to build an application that supports in-app payment. Then, a valid payment must include the parking space number and the vehicle info so that the user won't get fined. The parking space number and vehicle data can then be translated into spatial data that can visually show which space is not available, and how many spaces are left in that parking lot.
+            </p>
+            <h3>Storyboards</h3>
+            <p>
+             present and focus on the main issues, and to highlight the potential benefits that the application can bring.
+            </p>
+          </aside>
+          <aside class="ux graphic">
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/Storyboard-1.jpg" class="no-ajaxy" data-lightbox="storyboard" data-title="Storyboard 1">
+                <img src="../Project/ParknGo/Storyboard-1.jpg">
+                <figcaption>
+                  <h2>Storyboard 1</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/Storyboard-2.jpg" class="no-ajaxy" data-lightbox="storyboard" data-title="Storyboard 2">
+                <img src="../Project/ParknGo/Storyboard-2.jpg">
+                <figcaption>
+                  <h2>Storyboard 2</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/Storyboard-3.jpg" class="no-ajaxy" data-lightbox="storyboard" data-title="Storyboard 3">
+                <img src="../Project/ParknGo/Storyboard-3.jpg">
+                <figcaption>
+                  <h2>Storyboard 3</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="ux">
+            <h3>Low Fidelity Prototype</h3>
+            <p>Desktop Web Application</p>
+          </aside>
+          <aside class="ux graphic">
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/PaperPrototypeMain.JPG" class="no-ajaxy" data-lightbox="lowfidelity" data-title="Low-Fidelity Main">
+                <img src="../Project/ParknGo/PaperPrototypeMain.JPG">
+                <figcaption>
+                  <h2>Low-Fidelity Main</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/PaperPrototypeParkingLot.JPG" class="no-ajaxy" data-lightbox="lowfidelity" data-title="Low-Fidelity Parking Lot">
+                <img src="../Project/ParknGo/PaperPrototypeParkingLot.JPG">
+                <figcaption>
+                  <h2>Low-Fidelity Parking Lot</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/PaperPrototypeMainSignIn.JPG" class="no-ajaxy" data-lightbox="lowfidelity" data-title="Low-Fidelity Sign In">
+                <img src="../Project/ParknGo/PaperPrototypeMainSignIn.JPG">
+                <figcaption>
+                  <h2>Low-Fidelity Sign In</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/PaperPrototypeMainRegister.JPG" class="no-ajaxy" data-lightbox="lowfidelity" data-title="Low-Fidelity Register">
+                <img src="../Project/ParknGo/PaperPrototypeMainRegister.JPG">
+                <figcaption>
+                  <h2>Low-Fidelity Register</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/MobileDesignIdea.JPG" class="no-ajaxy" data-lightbox="lowfidelity" data-title="Low-Fidelity Mobile">
+                <img src="../Project/ParknGo/MobileDesignIdea.JPG">
+                <figcaption>
+                  <h2>Low-Fidelity Mobile</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="ux">
+            <h3>High Fidelity Prototype</h3>
+            <p>Desktop Web Application</p>
+
+          </aside>
+          <aside class="ux graphic">
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/ParknGo-Main.jpg" class="no-ajaxy" data-lightbox="highfidelity" data-title="High-Fidelity Main">
+                <img src="../Project/ParknGo/ParknGo-Main.jpg">
+                <figcaption>
+                  <h2>High-Fidelity Main</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/ParknGo-ParkingLotInfo.jpg" class="no-ajaxy" data-lightbox="highfidelity" data-title="High-Fidelity Parking Lot">
+                <img src="../Project/ParknGo/ParknGo-ParkingLotInfo.jpg">
+                <figcaption>
+                  <h2>High-Fidelity Parking Lot</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/ParknGo-Main-SignIn.jpg" class="no-ajaxy" data-lightbox="highfidelity" data-title="High-Fidelity SignIn">
+                <img src="../Project/ParknGo/ParknGo-Main-SignIn.jpg">
+                <figcaption>
+                  <h2>High-Fidelity Sign In</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ParknGo/ParknGo-Main-Register.jpg" class="no-ajaxy" data-lightbox="highfidelity" data-title="High-Fidelity Register">
+                <img src="../Project/ParknGo/ParknGo-Main-Register.jpg">
+                <figcaption>
+                  <h2>High-Fidelity Register</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>        
+          <aside class="ux">
+            <h3>Future Ideas</h3>
+            <p class="small">
+              <strong>#1</strong>
               <br>
               Associate a particular car with an unique QR code. Scan and store information under your account. Make payment via the application on a chosen car. Metermaid scans car QR code to check car parking permit status. Authority personels scans QR code to alert user via application if necessary
             </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note panel">
-              <strong>Future Idea 2</strong>
+            <p class="small">
+              <strong>#2</strong>
               <br>
               Number each parking space (Treat the parking lot as an array). Park and specify which parking lot and parking space to pay for. The inputted parking lot location will pull up the rate of that parking lot. The inputted space number allows the system to generate a parking lot map to dynamically display the availability of each individual parking space. Metermaids will use that map to check which car should not be in the parking lot/expired permit.
             </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note panel">
-              <strong>Future Idea 3</strong>
+            <p class="small">
+              <strong>#3</strong>
               <br>
               Same as idea 2 but instead of paying for a set rate, treat the space as a hotel room. Check in first then pay when you leave. This allows users to pay for their entire staying. No more overpay or underpay. HOWEVER, this requires users to check out of the space to stop the timer/payment, which people may forget.
             </p>          
-          </div>
+          </aside>
         </div>
       </section>
     </div>
@@ -186,6 +238,7 @@
   <!-- Ajaxify -->
   <script src="../js/ajaxify.js"></script>
   <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
+  <script src="../js/lightbox.min.js"></script>
   <script src="../js/mainscript.js"></script>
   <script src="../js/default.js"></script>
 </body>

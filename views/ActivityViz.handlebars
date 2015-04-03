@@ -15,6 +15,7 @@
     <![endif]-->        
       <link rel="stylesheet" type="text/css" href="../css/cleanup.css">
       <link rel="stylesheet" type="text/css" href="../css/zxzdesigns.css">
+      <link href="../css/lightbox.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="../css/icons.css">
       <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
@@ -41,153 +42,209 @@
         <p class="centerText">
           Kinect Data Activity Visualization is designed to be an add-on visualization tool to the existing Kinect data analysis programs such as <a href="https://tla.mpi.nl/tools/tla-tools/elan/" target="_blank" class="no-ajaxy">ELAN</a> and <a href="http://chronoviz.com/" target="_blank" class="no-ajaxy">ChronoViz</a> for Gesture Researchers.
         </p>
-        <div>
-          <div>
-            <img src="../Project/ActivityViz/Cover.jpg">
-          </div>
-        </div>
         <div class="center">
-          <div class="grid-half">
-            <p class="small panel">
-              <strong>MAIN TOOLS</strong>
-              <br>
+          <ul class="category">
+            <li><h2 class="graphic">Graphic</h2></li>
+            <li><h2 class="ux">UX</h2></li>
+            <li><h2 class="code">code</h2></li>
+          </ul>
+        </div>
+        <div class="projectDetails">
+          <aside class="graphic">
+            <figure>
+              <a href="../Project/ActivityViz/Cover.jpb" class="no-ajaxy" data-lightbox="graphic" data-title="Visualization">
+                <img src="../Project/ActivityViz/Cover.jpg">
+                <figcaption>
+                  <h2>Visualization</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="ux">
+            <h3>Target Users:</h3>
+            <p>
+              Gesture Researchers. Specifically gesture researchers who uses Microsoft X-Box Kinect as a part of their researches.
+            </p>
+          </aside>
+          <aside class="code">
+            <h3>MAIN TOOLS:</h3>
+            <p>
               Node.js | MongoDB | Mustache | Passport | D3.js | x3dom | HTML | Bootstrap | Github | Heroku
             </p>
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ActivityViz/FinalSlide.png">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ActivityViz/3D-frontalview.png">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ActivityViz/3D-sideview.png">
-          </div>
+          </aside>
+          <aside class="ux code">
+            <h3>Challenge:</h3>
+            <p>
+              Existing Kinect data analyzing programs such as <a href="https://tla.mpi.nl/tools/tla-tools/elan/" target="_blank" class="no-ajaxy">ELAN</a> and <a href="http://chronoviz.com/" target="_blank" class="no-ajaxy">ChronoViz</a> have limitations on the visualization. Gesture researchers do not have the ability to change its size and dimension, and most importantly, they do not have the freedom to manipulate the visualization. Some researchers even filtered data points by omitting the z coordinate, so that they can create their own 2D visualization. These limitations and work-around pose a critical constrain on the full potential of the Kinect data.
+            </p>
+            <h3>Idea:</h3>
+            <p>
+              Overall, the user data suggested that these programs' design has violated the user experience by restricting the users' freedom and control. Therefore, a more manipulative visualization is much needed for their researches.
+            </p>
+          </aside>
+          <aside class="ux code">
+            <figure>
+              <a href="../Project/ActivityViz/InfrastructureDiagram.png" class="no-ajaxy" data-lightbox="infrastructure" data-title="Infrastructure Diagram">
+                <img src="../Project/ActivityViz/InfrastructureDiagram.png">
+                <figcaption>
+                  <h2>Infrastructure Diagram</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="ux code">
+            <h3>Solution</h3>
+            <p>
+              My team and I designed an simple web application that uploads any CSV files, then it processes these CSV data into a 3D visualization by using D3.js and x3dom. The visualization provides the ability to zoom in/out, click and drag to any angle that the user wishes to see.
+            </p>
+          </aside>
+          <aside class="ux code">
+            <figure class="grid-half">
+              <a href="../Project/ActivityViz/d3.jpg" class="no-ajaxy" data-lightbox="infrastructure" data-title="D3.js">
+                <img src="../Project/ActivityViz/d3.jpg">
+                <figcaption>
+                  <h2>D3.js</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ActivityViz/x3dom.jpg" class="no-ajaxy" data-lightbox="infrastructure" data-title="x3dom">
+                <img src="../Project/ActivityViz/x3dom.jpg">
+                <figcaption>
+                  <h2>x3dom</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="ux">
+            <h3>Prototype:</h3>
+            <p>
+              Front-end high fidelity prototype
+            </p>
+          </aside>
+          <aside class="ux graphic">
+            <figure class="grid-half">
+              <a href="../Project/ActivityViz/Login.jpg" class="no-ajaxy" data-lightbox="prototype" data-title="Login Page">
+                <img src="../Project/ActivityViz/Login.jpg">
+                <figcaption>
+                  <h2>Login Page</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ActivityViz/Upload.jpg" class="no-ajaxy" data-lightbox="prototype" data-title="Upload Page">
+                <img src="../Project/ActivityViz/Upload.jpg">
+                <figcaption>
+                  <h2>Upload Page</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ActivityViz/Visualization.jpg" class="no-ajaxy" data-lightbox="prototype" data-title="Visualization Page">
+                <img src="../Project/ActivityViz/Visualization.jpg">
+                <figcaption>
+                  <h2>Visualization Page</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="graphic">
+            <figure class="grid-half">
+              <a href="../Project/ActivityViz/3D-frontalview.png" class="no-ajaxy" data-lightbox="graphic" data-title="3D-Frontal View">
+                <img src="../Project/ActivityViz/3D-frontalview.png">
+                <figcaption>
+                  <h2>3D-Frontal View</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ActivityViz/3D-sideview.png" class="no-ajaxy" data-lightbox="graphic" data-title="3D-Side View">
+                <img src="../Project/ActivityViz/3D-sideview.png">
+                <figcaption>
+                  <h2>3D-Side View</h2>
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="grid-half">
+              <a href="../Project/ActivityViz/FinalSlide.png" class="no-ajaxy" data-lightbox="graphic" data-title="Presentation Slide">
+                <img src="../Project/ActivityViz/FinalSlide.png">
+                <figcaption>
+                  <h2>Presentation Slide</h2>
+                </figcaption>
+              </a>
+            </figure>
+          </aside>
+          <aside class="ux">
+            <h3>
+              DESIGN DECISION
+            </h3>
+            <div>
+              <div class="grid-thirds">
+                <p class="small">
+                  <strong>User-Centered Design</strong>
+                  <br>
+                  Due to gesture researchers' heavy concern of data confidentiality, we decided to implement an account signup/signin feature so that users must login to use the application.
+                </p>
+              </div>
+              <div class="grid-thirds">
+                <p class="small">
+                  <strong>User Control & Freedom</strong>
+                  <br>
+                  Visualization is directly manipulative. Users may click and drag the visualization to any angle. In addition, they may also zoom in/out to get a better view of the data. 
+                </p>
+              </div>
+              <div class="grid-thirds">
+                <p class="small">
+                  <strong>Minimalist Design</strong>
+                  <br>
+                  Minimal content on each process stage to keep a simple and clean look, and making the advanced filtering options collapsable helps minimizing clusterness of contents.
+                </p>
+              </div>
+              <div class="grid-thirds">
+                <p class="small note">
+                  <strong>User Control & Freedom</strong>
+                  <br>
+                  Upload feature for users to work on any Kinect CSV file that they wish. It accepts 2D (x-y corrdinate points) or 3D (x-y-z coordinate points).
+                </p>
+              </div>
+              <div class="grid-thirds">
+                <p class="small note">
+                  <strong>Error Prevention</strong>
+                  <br>
+                  Force users to upload only Kinect generated CSV format file, and it will only proceed to the visualization if the format is correct.
+                </p>
+              </div>
+              <div class="grid-thirds">
+                <p class="small note">
+                  <strong>Help Users Recover from Errors</strong>
+                  <br>
+                  Error messages will pop up if the wrong type of file is selected for uploading. The selected file's name will also be displayed on the page for comfirmation.
+                </p>
+              </div>
+              <div class="grid-thirds">
+                <p class="small note">
+                  <strong>User Control & Freedom</strong>
+                  <br>
+                  Data filtering options near the visualization further provide data customizability and manipulation. 
+                </p>
+              </div>
+              <div class="grid-thirds">
+                <p class="small note">
+                  <strong>Flexibility and Efficiency of Use</strong>
+                  <br>
+                  Consistent navbar that provides each stage of process reduces time for users to recover from mistakes.
+                </p>
+              </div>
+              <div class="grid-thirds">
+                <p class="small note">
+                  <strong>Recognition rather than Recall</strong>
+                  <br>
+                  A message is next to the "Choose File" to remind user's interaction - what file they selected.
+                </p>
+              </div>
+            </div>
+          </aside>
         </div>
-        <div class="center">
-          <p class="small note panel">
-            <strong>WHAT/WHY</strong>
-            <br>
-            Existing Kinect data analyzing programs such as <a href="https://tla.mpi.nl/tools/tla-tools/elan/" target="_blank" class="no-ajaxy">ELAN</a> and <a href="http://chronoviz.com/" target="_blank" class="no-ajaxy">ChronoViz</a> have limitations on the visualization. Gesture researchers do not have the ability to change its size and dimension, and most importantly, they do not have the freedom to manipulate the visualization. Some researchers even filtered data points by omitting the z coordinate, so that they can create their own 2D visualization. These limitations and work-around pose a critical constrain on the full potential of the Kinect data. 
-            <br>
-            <br>
-            Overall, the user data suggested that user control and freedom are violated the most in the design aspect of these programs. Therefore, a more manipulative visualization is much needed for their research.
-          </p>
-        </div>
-        <div>
-          <img src="../Project/ActivityViz/InfrastructureDiagram.png">
-        </div>
-        <div class="center">
-          <div class="grid-half">
-            <p class="small panel">
-              <strong>INFRASTRUCTURE DIAGRAM</strong>
-              <br>
-              Kinect ->> CSV File ->> Operating System ->> D3.js + x3dom ->> Visualization
-            </p>
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ActivityViz/CSVSample.png">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ActivityViz/d3.jpg">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ActivityViz/x3dom.jpg">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ActivityViz/Login.jpg">
-          </div>
-          <div class="grid-half">
-            <img src="../Project/ActivityViz/Upload.jpg">
-          </div>
-        </div>
-        <div>
-            <img src="../Project/ActivityViz/Visualization.jpg">
-        </div>
-        <p class="large note panel">
-          <strong>DESIGN DECISION</strong>
-        </p>
-        <div class="center">
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>User-Centered Design</strong>
-              <br>
-              Due to gesture researchers' heavy concern of data confidentiality, we decided to implement an account signup/signin feature so users must login to use the application.
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>User Control & Freedom</strong>
-              <br>
-              Visualization is directly manipulative. Users may click and drag the visualization to a different angle. In addition, they may also zoom in/out to get a better view of the data. 
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>Minimalist Design</strong>
-              <br>
-              Minimal content on each process stage to keep a simple and clean look, and making the advanced filtering options collapsable helps minimizing clusterness of contents.
-            </p>
-            
-          </div>
-        </div>
-        <div class="center">
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>User Control & Freedom</strong>
-              <br>
-              Upload feature for users to work on any Kinect CSV file that they wish. It accepts 2D (x-y corrdinate points) or 3D (x-y-z coordinate points).
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>Error Prevention</strong>
-              <br>
-              Force users to upload only Kinect generated CSV format file, and it will only proceed to the visualization if the format is correct.
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>Help Users Recover from Errors</strong>
-              <br>
-              Error messages will pop up if the wrong type of file is selected for uploading. The selected file's name will also be displayed on the page.  
-            </p>
-          </div>
-        </div>
-        <div class="center">
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>User Control & Freedom</strong>
-              <br>
-              Data filtering options near the visualization further provide data customizability and manipulation. 
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>Flexibility and Efficiency of Use</strong>
-              <br>
-              Consistent navbar that provides each stage of process reduces time for users to recover from mistakes.
-            </p>
-          </div>
-          <div class="grid-thirds">
-            <p class="small note">
-              <strong>Recognition rather than Recall</strong>
-              <br>
-              A message is next to the "Choose File" to remind user's interaction - what file they selected.
-            </p>
-          </div>
-        </div>
-        <div class="center">
-          <p class="small demoNote">
-            Demo Note: 
-            create an account or use 
-            USERNAME: zhenxzheng PW: 123456789 
-            skip uploading file by clicking on visualization button on nav bar to see visualization demo.
-          </p>
-        </div>
-        <p class="center">
-          <a class="button" href="http://activiz.herokuapp.com/" target="_blank" class="no-ajaxy">Demo<span class="glyphicon glyphicon-new-window"></span></a>
-        </p>
       </section>
     </div>
     <footer>
@@ -229,6 +286,7 @@
   <!-- Ajaxify -->
   <script src="../js/ajaxify.js"></script>
   <!-- <script src="https://code.jquery.com/jquery.js"></script>-->
+  <script src="../js/lightbox.min.js"></script>
   <script src="../js/mainscript.js"></script>
   <script src="../js/default.js"></script>
 </body>

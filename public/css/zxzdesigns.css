@@ -73,6 +73,9 @@ p a{
 p a:hover{
 	border-bottom:solid 1px #777;
 }
+.mobileMode p a:hover{
+	border-bottom:inherit;
+}
 .container{
 	width:88%;
 	max-width:1320px;
@@ -116,6 +119,9 @@ figure{
 .whatIdo figure a:hover:before, .projects figure a:hover:before{
 	opacity:0.5;
 }
+/*.mobileMode .whatIdo figure a:hover:before, .mobileMode .whatIdo figure a:hover:before{
+	opacity:0;
+}*/
 figcaption{
 	position:absolute;
 	left:0;
@@ -539,7 +545,7 @@ ul{
 .graphic{
 	text-align:center;
 }
-.ux p, .code p{
+.ux p, .code p , .graphic p{
 	text-align:left;
 	padding-left:20px;
 	margin-bottom:2em;
@@ -828,6 +834,9 @@ p.demoNote{
 	}
 	.project .grid-half{
 		width:50%;
+		margin:0;
+	}
+	.project figure{
 		margin:0;
 	}
 /*	.project p.small{

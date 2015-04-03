@@ -16,8 +16,6 @@
       <link rel="stylesheet" type="text/css" href="../css/cleanup.css">
       <link rel="stylesheet" type="text/css" href="../css/zxzdesigns.css">
       <link href="../css/lightbox.css" rel="stylesheet">
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
       <link rel="stylesheet" type="text/css" href="../css/icons.css">
       <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
@@ -90,11 +88,11 @@
           <aside class="ux">
             <h3>Challenge:</h3>
             <p>
-              Although the nav bars with the main topics provide a quick access to the information that the users need, novice users who don't know what information to look for will most likely get confused. 
+              In the first mock up, although the nav bars with the main topics provide a quick access to the information that the users need, novice users who don't know what information to look for will most likely get confused. 
             </p>
             <h3>solution</h3>
             <p>
-              I put a short text and button at the end of every page as a suggestion of what they should do next. This helps guide and educate the novice user through the choosing process. The design decision behind this feature is based on two reasons: 1.the power of suggestion. 2.the paradox of choice.
+              I put a short text and button at the end of every page as a suggestion of what they should do next. This helps guide and educate the novice user through the choosing process. The design decision behind this feature is based on two reasons: the power of suggestion & the paradox of choice.
             </p>
           </aside>
           <aside class="ux">
@@ -118,11 +116,11 @@
           <aside class="ux code">
             <h3>Challenge:</h3>
             <p>
-              The website was suffering from loading speed because it contains many high resolution images. 
+              The website was suffering from loading speed due to many high resolution images, and many images take more than 5 seconds to load.
             </p>
             <h3>solution</h3>
             <p>
-              I created different resolutions of the same image. The site will load the low resolution first, then seamlessly preload the higher resolution ones depending on the user's viewport. Once the higher images is loaded, it will replace the low resolution one.
+              My goal was to display the whole image as soon as possible, so I created different resolutions of the same image. The site will now load the low resolution first so the users have something to look at, then seamlessly preload the higher resolution ones if the user's viewport is higher. Once the optimal images are loaded, they will replace the lower resolution images. This solves the loading speed problem by having the appropriate resolution images, and enhances user experience by preventing users from waiting.
             </p>
           </aside>
           <aside class="ux code">
@@ -138,11 +136,11 @@
           <aside class="ux code">
             <h3>Challenge:</h3>
             <p>
-              The HTML elements in the video page will show up first before the YouTube api request is completed, so the page looks like it has empty element and the users do not know that the request is still processing. 
+              The HTML elements in the video page will show up first before the YouTube api request is completed, so the page looks like it has empty elements and the users do not know that the request is still being processed.
             </p>
             <h3>solution</h3>
             <p>
-              Since the request speed can not be modified, I used angular directive and resolve to add a visual loading icon whenever a request is being made. This provides a feedback to the user to let them know that the page is not done loading.
+              Since the request speed can not be modified, I used angular directive and resolve to add a visual loading icon whenever a request is being made. This provides a feedback to the user to let them know that the page is not done loading. After the api requested is completed, the page will show up along with all of the request contents.
             </p>
           </aside>
           <aside class="ux code">
@@ -166,13 +164,27 @@
           <aside class="ux code">
             <h3>Other Features:</h3>
             <p>
-              For users: click/tab to call and email | input form for messages<br>
+              For users: click/tab to call and email | input form for messages
+            </p>
+            <p>
               For client: password protected pages | check/search messages | favorite messages
             </p>
           </aside>
           <aside class="graphic">
+            <h3>Notes</h3>
+            <p class="small">
+              Dancing Tails Dog Training Logo was designed by owner's colleague. 
+            </p>
+            <p class="small">
+              Text, colors, and some layout of the site are adjusted to owner's preference.
+            </p>
             <figure>
-              <img src="../Project/DancingTails/DancingTailsResponsive.png">
+              <a href="../Project/DancingTails/DancingTailsResponsive.png" class="no-ajaxy" data-lightbox="graphic" data-title="Responsive Design">
+                <img src="../Project/DancingTails/DancingTailsResponsive.png">
+                <figcaption>
+                  <h2>Responsive Design</h2>
+                </figcaption>
+              </a>
             </figure>
           </aside> 
         </div>
