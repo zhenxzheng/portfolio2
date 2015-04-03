@@ -309,7 +309,8 @@ function checkMobile(){
 	if($isMobile != null){
 		$('body').addClass("mobileMode");
 		$('.splash').css("background-attachment","scroll");
-		$('.delay0, .delay1, .delay2, .delay3, .delay4, .delay5').removeClass('delay0 delay1 delay2 delay3 delay4 delay5');
+		$('.delay0, .delay1, .delay2, .delay3, .delay4, .delay5, .bottom, .left, .right, .top').removeClass('delay0 delay1 delay2 delay3 delay4 delay5 top left right bottom hideBottom hideTop hideLeft hideRight');
+		$
 		// $('.button').bind('touchstart',function(){
 		// 	$('.button').css({	"background":"#373737",
 		// 						"color":"#fff"});
