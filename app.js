@@ -33,6 +33,7 @@ app.set('views', __dirname + '/views');
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.bodyParser());
+app.use(require('prerender-node').set('prerenderToken', process.env.PRERENDER_TOKEN));
 
 
 //routes
