@@ -47,6 +47,38 @@ app.get('/messages', contact.viewMessage);
 
 app.post('/messages/new', contact.saveMessage);
 
+app.get('/sitemap.xml', function(req, res) {
+	// do the XML string generation
+	var urls = ['home', 'about', 'contact', 'projects'];
+	var projects = ['ActivityViz','UCSDMap','OnMyBlock','PastPortfolios','ResumeDesign','SocialFitness','ParknGo','IconDesign','DancingTails','SFMuseum'];
+	// the root of your website - the protocol and the domain name with a trailing slash
+	var root_path = 'http://zxzdesigns.com/';
+	// XML sitemap generation starts here
+	var priority = 0.80;
+	var freq = 'yearly';
+	var xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">';
+	for (var i in urls) {
+		xml += '<url>';
+		xml += '<loc>'+ root_path + urls[i] + '</loc>';
+		xml += '<changefreq>'+ freq +'</changefreq>';
+		xml += urls[i]==''?'<priority>'+ 1.00 +'</priority>':'<priority>'+ priority +'</priority>';
+		xml += '</url>';
+		if(urls[i] == 'projects'){
+			for (var j in projects){
+				xml += '<url>';
+				xml += '<loc>'+ root_path + urls[i] + '/' + projects[j] + '</loc>';
+				xml += '<changefreq>'+ freq +'</changefreq>';
+				xml += '<priority>'+ priority +'</priority>';
+				xml += '</url>';
+			}
+		}
+		i++;
+	}
+	xml += '</urlset>';
+	res.header('Content-Type', 'text/xml');
+	res.send(xml);
+});
+
 //set environment ports and start application
 app.set('port', process.env.PORT || 3000);
 http.createServer(app).listen(app.get('port'), function(){
