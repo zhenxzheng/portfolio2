@@ -296,7 +296,7 @@ nav ul li a:hover{
 	height:100%;
 	background-size:cover;
 	background-position:center center;
-	background-attachment:fixed;
+	background-attachment:normal;
 	text-align: center;
 	position:relative;
 }
@@ -306,7 +306,7 @@ nav ul li a:hover{
 	height:100%;
 	background-size:cover;
 	background-position:center center;
-	background-attachment:fixed;
+	background-attachment:normal;
 	text-align: center;
 	position:relative;
 }
@@ -316,7 +316,7 @@ nav ul li a:hover{
 	height:100%;
 	background-size:cover;
 	background-position:center center;
-	background-attachment:fixed;
+	background-attachment:normal;
 	overflow:hidden;
 }
 .splash:before{
@@ -367,6 +367,7 @@ nav ul li a:hover{
 #line1,#line2,#line3{
 	position:relative;
 	bottom:0;
+	line-height: 1.2em;
 }
 #line1{
 	font-size:4.57em !important;
@@ -401,7 +402,7 @@ nav ul li a:hover{
 	background-position:center left;
 	text-align: center;
 	position:relative;
-	background-attachment:fixed;
+	background-attachment:normal;
 }
 #mutt p a{
 	position:absolute;

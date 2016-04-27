@@ -196,7 +196,8 @@ function loadHighRes(){
 		$('.hasHighRes').each(function(i, image){
 			imgObjArr[i] = new Image();
 			if ($(image).attr('src')===undefined){
-				var newUrl = new RegExp(/http.+\/[^\/'");]+/).exec($(image).attr("style").match(/background-image.+/)[0])[0].replace(/\./, "@2x.");
+				var ext = $(image).attr("style").match(/background-image.+/)[0].match(/\.(jpg|JPG|png|PNG)/)[0];
+				var newUrl = new RegExp(/\..+\/[^\/'");]+/).exec($(image).attr("style").match(/background-image.+/)[0])[0].replace(/\.(jpg|JPG|png|PNG)/, "@2x"+ext);
 				imgObjArr[i].src = newUrl;
 				imgObjArr[i].onload = function(){
 					$(image).css('background-image', 'url('+newUrl+')');
