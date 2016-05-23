@@ -152,6 +152,7 @@ form.container{
 	position:relative;
 	vertical-align: top;
 	float:left;
+	line-height: 0;
 }
 .projects .bgImg{
 	height:100%;
@@ -370,16 +371,16 @@ nav ul li a:hover{
 	line-height: 1.2em;
 }
 #line1{
-	font-size:4.57em !important;
-	font-size:7.5vw !important;
+	font-size:3.85em !important;
+	font-size:5.5vw !important;
 	-moz-transition-delay: 0s;
 	-o-transition-delay: 0s;
 	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
 }
 #line2{
-	font-size:1.82em !important;
-	font-size:3vw !important;
+	font-size:1.59em !important;
+	font-size:2.2vw !important;
 	-moz-transition-delay: .08s;
 	-o-transition-delay: .08s;
 	-webkit-transition-delay: .08s;
@@ -474,12 +475,18 @@ nav ul li a:hover{
 	margin-top:3em;
 }
 .home .aboutMe figure{
-	width:200px;
-	height:200px;
-	margin: 2em auto;
+	width: 200px;
+    height: 200px;
+    margin: 2em auto;
+    border-radius: 100px;
+    border: solid 3px #eaeaea;
 }
 .home .aboutMe img{
-	width:100%;
+    position: absolute;
+    height: 100%;
+    max-width: none;
+    transform: translate(-50%, 0%);
+    left: 50%;
 }
 .whatIdo h2{
 	text-align:center;
