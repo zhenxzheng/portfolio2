@@ -14,8 +14,8 @@ var projects = require('./routes/projects');
 // var instagram = require('./routes/instagram');
 
 //database setup - uncomment to set up your database
-var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost/zxzdesigns');
+// var mongoose = require('mongoose');
+// mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost/zxzdesigns');
 
 //load environment variables
 var dotenv = require('dotenv');
