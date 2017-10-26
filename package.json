@@ -10,14 +10,14 @@
     "url": "https://github.com/zhenxzheng/portfolio2"
   },
   "dependencies": {
+    "dotenv": "*",
     "express": "3.x",
     "express3-handlebars": "*",
+    "instagram-node-lib": "*",
     "mongodb": "*",
     "mongoose": "*",
-    "dotenv": "*",
-    "instagram-node-lib": "*",
-    "serve-favicon": "*",
-    "prerender-node": "^1.2.1"
+    "prerender-node": "^2.7.4",
+    "serve-favicon": "*"
   },
   "engines": {
     "node": "0.10.x"
